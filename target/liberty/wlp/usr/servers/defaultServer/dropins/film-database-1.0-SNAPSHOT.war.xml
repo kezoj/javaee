@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive>
+    <dir sourceOnDisk="C:\Users\Józek\IdeaProjects\film-database\src\main\webapp" targetInArchive="/"/>
+    <dir sourceOnDisk="C:\Users\Józek\IdeaProjects\film-database\target\classes" targetInArchive="/WEB-INF/classes"/>
+    <file sourceOnDisk="C:\Users\Józek\IdeaProjects\film-database\target\tmp\META-INF\MANIFEST.MF" targetInArchive="/META-INF/MANIFEST.MF"/>
+</archive>

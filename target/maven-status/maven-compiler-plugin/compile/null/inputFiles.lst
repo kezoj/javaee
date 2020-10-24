@@ -1,0 +1,17 @@
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\repository\Repository.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\director\dto\GetDirectorsResponse.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\servlet\HttpHeaders.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\director\entity\Director.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\director\servlet\AvatarServlet.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\servlet\ServletUtility.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\director\servlet\DirectorServlet.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\director\dto\GetDirectorResponse.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\director\entity\Education.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\film\entity\Film.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\digest\Sha256Utility.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\director\service\DirectorService.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\configuration\InitializedData.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\FilmDistributor\entity\FilmDistributor.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\director\repository\DirectorRepository.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\serialization\CloningUtility.java
+C:\Users\Józek\IdeaProjects\film-database\src\main\java\kaom\datastore\DataStore.java

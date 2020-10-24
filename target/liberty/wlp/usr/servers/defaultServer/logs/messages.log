@@ -1,0 +1,40 @@
+********************************************************************************
+product = Open Liberty 20.0.0.11 (wlp-1.0.46.cl201120201014-1215)
+wlp.install.dir = C:/Users/Józek/IdeaProjects/film-database/target/liberty/wlp/
+java.home = C:\Program Files\Java\jdk-11.0.8
+java.version = 11.0.8
+java.runtime = Java(TM) SE Runtime Environment (11.0.8+10-LTS)
+os = Windows 10 (10.0; amd64) (en_GB)
+process = 5944@LAPTOP-STG78NFK
+********************************************************************************
+[24/10/2020, 18:51:43:007 CEST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
+[24/10/2020, 18:51:44:595 CEST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 1.886 seconds
+[24/10/2020, 18:51:44:627 CEST] 00000023 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[24/10/2020, 18:51:45:875 CEST] 0000001b com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[24/10/2020, 18:51:46:777 CEST] 00000027 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application film-database-1.0-SNAPSHOT.
+[24/10/2020, 18:51:46:779 CEST] 00000027 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The film-database-1.0-SNAPSHOT application is using the loose application definition at the C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\dropins\film-database-1.0-SNAPSHOT.war.xml location.
+[24/10/2020, 18:51:48:376 CEST] 00000027 com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[24/10/2020, 18:51:48:475 CEST] 00000027 org.jboss.weld.Version                                       I WELD-000900: 3.1.4 (Final)
+[24/10/2020, 18:51:49:353 CEST] 00000027 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: film-database-1.0-SNAPSHOT.
+[24/10/2020, 18:51:49:355 CEST] 00000027 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module film-database-1.0-SNAPSHOT has been bound to default_host.
+[24/10/2020, 18:51:49:356 CEST] 00000027 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9080/order-out/
+[24/10/2020, 18:51:49:476 CEST] 0000002c com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/order-out
+[24/10/2020, 18:51:49:486 CEST] 0000002c com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[24/10/2020, 18:51:49:666 CEST] 0000002c com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application film-database-1.0-SNAPSHOT started in 2.889 seconds.
+[24/10/2020, 18:51:49:702 CEST] 00000023 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host kubernetes.docker.internal  (IPv4: 127.0.0.1) port 9080.
+[24/10/2020, 18:51:49:744 CEST] 00000027 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[24/10/2020, 18:51:49:762 CEST] 00000023 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [cdi-2.0, jsonb-1.0, jsonp-1.1, servlet-4.0].
+[24/10/2020, 18:51:49:763 CEST] 00000023 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 5.178 seconds.
+[24/10/2020, 18:51:49:764 CEST] 00000023 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The defaultServer server is ready to run a smarter planet. The defaultServer server started in 7.056 seconds.
+[24/10/2020, 18:51:53:297 CEST] 00000025 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9080/order-out/
+[24/10/2020, 18:51:53:326 CEST] 00000025 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application film-database-1.0-SNAPSHOT has stopped successfully.
+[24/10/2020, 18:51:53:334 CEST] 00000025 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application film-database-1.0-SNAPSHOT.
+[24/10/2020, 18:51:53:334 CEST] 00000025 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The film-database-1.0-SNAPSHOT application is using the loose application definition at the C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\dropins\film-database-1.0-SNAPSHOT.war.xml location.
+[24/10/2020, 18:51:53:380 CEST] 00000027 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[24/10/2020, 18:51:53:803 CEST] 00000025 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: film-database-1.0-SNAPSHOT.
+[24/10/2020, 18:51:53:803 CEST] 00000025 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module film-database-1.0-SNAPSHOT has been bound to default_host.
+[24/10/2020, 18:51:53:803 CEST] 00000025 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9080/order-out/
+[24/10/2020, 18:51:53:805 CEST] 00000023 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/order-out
+[24/10/2020, 18:51:53:805 CEST] 00000023 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[24/10/2020, 18:51:53:834 CEST] 00000023 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application film-database-1.0-SNAPSHOT updated in 0.500 seconds.
+[24/10/2020, 18:51:53:911 CEST] 00000025 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
