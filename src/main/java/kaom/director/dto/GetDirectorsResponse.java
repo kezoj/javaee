@@ -48,7 +48,7 @@ public class GetDirectorsResponse {
     /**
      * @return mapper for convenient converting entity object to dto object
      */
-    public static Function<Collection<Director>, GetDirectorsResponse> entityToDtoMapper() {
+    public static Function<Collection<kaom.director.entity.Director>, GetDirectorsResponse> entityToDtoMapper() {
         return directors -> {
             GetDirectorsResponse.GetDirectorsResponseBuilder response = GetDirectorsResponse.builder();
             directors.stream()

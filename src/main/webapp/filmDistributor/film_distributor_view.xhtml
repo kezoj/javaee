@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/templates/layout.xhtml">
+
+    <f:metadata>
+        <f:viewParam name="id" value="#{filmDistributorView.id}" required="true"/>
+        <f:viewAction action="#{filmDistributorView.init()}"/>
+    </f:metadata>
+
+    <ui:define name="content">
+            <article class="text--justified">
+                <header><h2><h:outputText value="#{filmDistributorView.filmDistributor.name}"/></h2></header>
+                <div class="character__grid">
+                    <div class="character__level_profession">
+                        Creation Date <h:outputText value="#{filmDistributorView.filmDistributor.creationDate}"/> <h:outputText
+                            value="#{filmDistributorView.filmDistributor.creationDate}"/>
+                    </div>
+                    <div class="character__experience">
+                        Capital <h:outputText value="#{filmDistributorView.filmDistributor.capital}"/>
+                    </div>
+                </div>
+            </article>
+    </ui:define>
+
+</ui:composition>

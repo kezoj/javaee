@@ -1,4 +1,4 @@
-#Sat Oct 24 18:51:38 CEST 2020
+#Sun Oct 25 19:38:55 CET 2020
 dev/api/ibm/schema/ibm-managed-bean-bnd_1_0.xsd=3b0b778a121ff7c6c28f9e72afd96488
 lib/com.ibm.ws.org.jboss.weld3_1.0.46.jar=c47ba295ec20bc832f43d11b594e4d95
 lib/com.ibm.ws.cdi.internal_1.0.46.jar=43651780f9cee7ea72d630f1551574a3

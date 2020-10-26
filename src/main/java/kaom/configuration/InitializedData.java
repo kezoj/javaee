@@ -4,6 +4,11 @@ import kaom.digest.Sha256Utility;
 import kaom.director.entity.Director;
 import kaom.director.entity.Education;
 import kaom.director.service.DirectorService;
+import kaom.film.entity.Film;
+import kaom.film.service.FilmService;
+import kaom.filmDistributor.dto.GetFilmDistributorsResponse;
+import kaom.filmDistributor.entity.FilmDistributor;
+import kaom.filmDistributor.service.FilmDistributorService;
 import lombok.SneakyThrows;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -24,10 +29,14 @@ public class InitializedData {
      * Service for directors operations.
      */
     private final DirectorService directorService;
+    private final FilmDistributorService filmDistributorService;
+    private final FilmService filmService;
 
     @Inject
-    public InitializedData(DirectorService directorService) {
+    public InitializedData(DirectorService directorService, FilmDistributorService filmDistributorService, FilmService filmService) {
         this.directorService = directorService;
+        this.filmDistributorService = filmDistributorService;
+        this.filmService = filmService;
     }
 
     public void contextInitialized(@Observes @Initialized(ApplicationScoped.class) Object init) {
@@ -67,6 +76,24 @@ public class InitializedData {
         directorService.create(kevin);
         directorService.create(sherlock);
         directorService.create(kswiecicki);
+
+        FilmDistributor distributor_1 = FilmDistributor.builder()
+                .name("company nr. 1")
+                .creationDate(LocalDate.of(1998, 6, 29))
+                .capital(1000)
+                .build();
+
+        filmDistributorService.create(distributor_1);
+
+        Film film_1 = Film.builder()
+                .director(mike)
+                .filmDistributor(distributor_1)
+                .releaseDate(LocalDate.of(1998, 6, 29))
+                .title("ewuqri")
+                .genere("adsf")
+                .build();
+
+        filmService.create(film_1);
     }
 
     /**

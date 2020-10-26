@@ -1,5 +1,7 @@
 package kaom.datastore;
 
+import kaom.film.entity.Film;
+import kaom.filmDistributor.entity.FilmDistributor;
 import kaom.serialization.CloningUtility;
 import kaom.director.entity.Director;
 import lombok.extern.java.Log;
@@ -18,17 +20,11 @@ import java.util.stream.Collectors;
 @ApplicationScoped
 public class DataStore {
 
-    /**
-     * Set of all directors.
-     */
     private Set<Director> directors = new HashSet<>();
+    private Set<FilmDistributor> filmDistributors = new HashSet<>();
+    private Set<Film> films = new HashSet<>();
 
-    /**
-     * Seeks for single director.
-     *
-     * @param id director's id
-     * @return container (can be empty) with director
-     */
+
     public synchronized Optional<Director> findDirector(Long id) {
         return directors.stream()
                 .filter(character -> character.getId().equals(id))
@@ -36,31 +32,15 @@ public class DataStore {
                 .map(CloningUtility::clone);
     }
 
-    /**
-     * Seeks for all directors.
-     *
-     * @return list (can be empty) of all directors
-     */
     public synchronized List<Director> findAllDirectors() {
         return directors.stream().map(CloningUtility::clone).collect(Collectors.toList());
     }
 
-    /**
-     * Stores new director.
-     *
-     * @param director new director
-     */
     public synchronized void createDirector(Director director) throws IllegalArgumentException {
         director.setId(findAllDirectors().stream().mapToLong(Director::getId).max().orElse(0) + 1);
         directors.add(director);
     }
 
-    /**
-     * Updates existing director.
-     *
-     * @param director director to be updated
-     * @throws IllegalArgumentException if director with provided id does not exist
-     */
     public synchronized void updateDirector(Director director) throws IllegalArgumentException {
         findDirector(director.getId()).ifPresentOrElse(
                 original -> {
@@ -73,12 +53,6 @@ public class DataStore {
                 });
     }
 
-    /**
-     * Deletes existing director.
-     *
-     * @param id director's id
-     * @throws IllegalArgumentException if director with provided id does not exist
-     */
     public synchronized void deleteDirector(Long id) throws IllegalArgumentException {
         findDirector(id).ifPresentOrElse(
                 original -> directors.remove(original),
@@ -88,4 +62,81 @@ public class DataStore {
                 });
     }
 
+
+
+    public synchronized Optional<FilmDistributor> findFilmDistributor(Long id) {
+        return filmDistributors.stream()
+                .filter(character -> character.getId().equals(id))
+                .findFirst()
+                .map(CloningUtility::clone);
+    }
+
+    public synchronized List<FilmDistributor> findAllFilmDistributors() {
+        return filmDistributors.stream().map(CloningUtility::clone).collect(Collectors.toList());
+    }
+
+    public synchronized void createFilmDistributor(FilmDistributor filmDistributor) throws IllegalArgumentException {
+        filmDistributor.setId(findAllFilmDistributors().stream().mapToLong(FilmDistributor::getId).max().orElse(0) + 1);
+        filmDistributors.add(filmDistributor);
+    }
+
+    public synchronized void updateFilmDistributor(FilmDistributor filmDistributor) throws IllegalArgumentException {
+        findFilmDistributor(filmDistributor.getId()).ifPresentOrElse(
+                original -> {
+                    filmDistributors.remove(original);
+                    filmDistributors.add(filmDistributor);
+                },
+                () -> {
+                    throw new IllegalArgumentException(
+                            String.format("The director with id \"%d\" does not exist", filmDistributor.getId()));
+                });
+    }
+
+    public synchronized void deleteFilmDistributor(Long id) throws IllegalArgumentException {
+        findFilmDistributor(id).ifPresentOrElse(
+                original -> filmDistributors.remove(original),
+                () -> {
+                    throw new IllegalArgumentException(
+                            String.format("The director with id \"%d\" does not exist", id));
+                });
+    }
+
+
+
+    public synchronized Optional<Film> findFilm(Long id) {
+        return films.stream()
+                .filter(character -> character.getId().equals(id))
+                .findFirst()
+                .map(CloningUtility::clone);
+    }
+
+    public synchronized List<Film> findAllFilms() {
+        return films.stream().map(CloningUtility::clone).collect(Collectors.toList());
+    }
+
+    public synchronized void createFilm(Film film) throws IllegalArgumentException {
+        film.setId(findAllFilms().stream().mapToLong(Film::getId).max().orElse(0) + 1);
+        films.add(film);
+    }
+
+    public synchronized void updateFilm(Film film) throws IllegalArgumentException {
+        findFilm(film.getId()).ifPresentOrElse(
+                original -> {
+                    films.remove(original);
+                    films.add(film);
+                },
+                () -> {
+                    throw new IllegalArgumentException(
+                            String.format("The director with id \"%d\" does not exist", film.getId()));
+                });
+    }
+
+    public synchronized void deleteFilm(Long id) throws IllegalArgumentException {
+        findFilm(id).ifPresentOrElse(
+                original -> films.remove(original),
+                () -> {
+                    throw new IllegalArgumentException(
+                            String.format("The director with id \"%d\" does not exist", id));
+                });
+    }
 }

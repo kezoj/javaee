@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/templates/layout.xhtml">
+
+    <ui:define name="content">
+            <article class="text--justified">
+                <header><h2>Film Distributors</h2></header>
+                <h:dataTable value="#{filmDistributorList.filmDistributors.filmDistributors}" var="filmDistributor" styleClass="data-table">
+                    <h:column>
+                        <f:facet name="header">name</f:facet>
+                        <h:outputText value="#{filmDistributor.name}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">view</f:facet>
+                        <h:link outcome="/filmDistributor/film_distributor_view.xhtml" value="view">
+                            <f:param name="id" value="#{filmDistributor.id}"/>
+                        </h:link>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">edit</f:facet>
+                        <h:link outcome="/filmDistributor/film_distributor_edit.xhtml" value="edit">
+                            <f:param name="id" value="#{filmDistributor.id}"/>
+                        </h:link>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">delete</f:facet>
+                        <h:form>
+                            <h:commandButton styleClass="ui-button ui-control" value="delete"
+                                             action="#{filmDistributorList.deleteAction(filmDistributor)}"/>
+                        </h:form>
+                    </h:column>
+                </h:dataTable>
+            </article>
+    </ui:define>
+
+</ui:composition>

@@ -1,5 +1,7 @@
 package kaom.director.servlet;
 
+import kaom.filmDistributor.dto.GetFilmDistributorsResponse;
+import kaom.filmDistributor.service.FilmDistributorService;
 import kaom.servlet.ServletUtility;
 import kaom.director.dto.GetDirectorResponse;
 import kaom.director.dto.GetDirectorsResponse;
@@ -89,8 +91,7 @@ public class DirectorServlet extends HttpServlet {
      * @throws IOException if an input or output exception occurred
      */
     private void getDirectors(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        //response.getWriter().write(jsonb.toJson(GetDirectorsResponse.entityToDtoMapper().apply(service.findAll())));
-        response.sendError(HttpServletResponse.SC_NOT_FOUND);
+        response.getWriter().write(jsonb.toJson(GetDirectorsResponse.entityToDtoMapper().apply(service.findAll())));
     }
 
 }

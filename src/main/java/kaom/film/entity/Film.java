@@ -1,17 +1,25 @@
 package kaom.film.entity;
 
-import kaom.FilmDistributor.entity.FilmDistributor;
+import kaom.filmDistributor.entity.FilmDistributor;
 import kaom.director.entity.Director;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
+import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Map.Entry;
 
-public class Film {
+@Getter
+@Setter
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@ToString
+@EqualsAndHashCode
+public class Film implements Serializable {
 
+    public Long id;
     public Director director;
-    public FilmDistributor movie_distributor;
+    public FilmDistributor filmDistributor;
     public LocalDate releaseDate;
     public String title;
     public String genere;
