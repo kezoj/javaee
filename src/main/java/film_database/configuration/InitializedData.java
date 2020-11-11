@@ -11,6 +11,7 @@ import lombok.SneakyThrows;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.Initialized;
+import javax.enterprise.context.control.RequestContextController;
 import javax.enterprise.event.Observes;
 import javax.inject.Inject;
 import java.io.InputStream;
@@ -29,12 +30,14 @@ public class InitializedData {
     private final DirectorService directorService;
     private final FilmDistributorService filmDistributorService;
     private final FilmService filmService;
+    private final RequestContextController requestContextController;
 
     @Inject
-    public InitializedData(DirectorService directorService, FilmDistributorService filmDistributorService, FilmService filmService) {
+    public InitializedData(DirectorService directorService, FilmDistributorService filmDistributorService, FilmService filmService, RequestContextController requestContextController) {
         this.directorService = directorService;
         this.filmDistributorService = filmDistributorService;
         this.filmService = filmService;
+        this.requestContextController = requestContextController;
     }
 
     public void contextInitialized(@Observes @Initialized(ApplicationScoped.class) Object init) {
@@ -46,6 +49,8 @@ public class InitializedData {
      * be created only once.
      */
     private synchronized void init() {
+        requestContextController.activate();
+
         Director mike = Director.builder()
                 .name("Mike")
                 .birthDate(LocalDate.of(1990, 10, 21))
@@ -117,6 +122,8 @@ public class InitializedData {
         filmService.create(film_1);
         filmService.create(film_2);
         filmService.create(film_3);
+
+        requestContextController.deactivate();
     }
 
     /**

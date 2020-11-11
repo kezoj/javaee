@@ -1,0 +1,1273 @@
+********************************************************************************
+product = Open Liberty 20.0.0.11 (wlp-1.0.46.cl201120201014-1215)
+wlp.install.dir = C:/Users/Józek/IdeaProjects/film-database/target/liberty/wlp/
+java.home = C:\Program Files\Java\jdk-11.0.8
+java.version = 11.0.8
+java.runtime = Java(TM) SE Runtime Environment (11.0.8+10-LTS)
+os = Windows 10 (10.0; amd64) (en_GB)
+process = 17940@LAPTOP-STG78NFK
+********************************************************************************
+[11/11/2020, 16:31:26:195 CET] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
+[11/11/2020, 16:31:27:751 CET] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 1.926 seconds
+[11/11/2020, 16:31:27:783 CET] 00000023 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[11/11/2020, 16:31:28:196 CET] 0000001b .apache.cxf.cxf.core.3.2:1.0.46.cl201120201014-1215(id=157)] I Aries Blueprint packages not available. So namespaces will not be registered
+[11/11/2020, 16:31:28:397 CET] 0000001b com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[11/11/2020, 16:31:29:738 CET] 00000027 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application film-database-1.0-SNAPSHOT.
+[11/11/2020, 16:31:29:739 CET] 00000027 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The film-database-1.0-SNAPSHOT application is using the loose application definition at the C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\dropins\film-database-1.0-SNAPSHOT.war.xml location.
+[11/11/2020, 16:31:31:345 CET] 00000027 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.ClassNotFoundException: org.h2.jdbcx.JdbcDataSource com.ibm.ws.jdbc.internal.JDBCDriverService 234" at ffdc_20.11.11_16.31.31.0.log
+[11/11/2020, 16:31:31:539 CET] 00000027 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx]. com.ibm.ws.jdbc.DataSourceService 587" at ffdc_20.11.11_16.31.31.1.log
+[11/11/2020, 16:31:31:660 CET] 00000027 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx]. com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1 121" at ffdc_20.11.11_16.31.31.2.log
+[11/11/2020, 16:31:31:694 CET] 00000013 LogService-180-com.ibm.ws.jdbc                               E CWWKE0701E: FrameworkEvent ERROR org.osgi.framework.ServiceException: Exception in com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService()
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:226)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:114)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:48)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:530)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:494)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:685)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$0(WSContextFactory.java:81)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$1(WSContextFactory.java:81)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at com.ibm.ws.jndi.internal.WSContextFactory.getService(WSContextFactory.java:81)
+	at com.ibm.ws.jndi.internal.WSContext.getReference(WSContext.java:520)
+	at com.ibm.ws.jndi.internal.WSContext.resolveObject(WSContext.java:139)
+	at com.ibm.ws.jndi.internal.WSContext.lookup(WSContext.java:309)
+	at com.ibm.ws.jndi.WSContextBase.lookup(WSContextBase.java:61)
+	at org.apache.aries.jndi.DelegateContext.lookup(DelegateContext.java:149)
+	at java.naming/javax.naming.InitialContext.lookup(InitialContext.java:409)
+	at com.ibm.ws.jpa.container.osgi.internal.OSGiJPAPUnitInfo.lookupDataSource(OSGiJPAPUnitInfo.java:317)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJPADataSource(JPAPUnitInfo.java:337)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJtaDataSource(JPAPUnitInfo.java:380)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.initialize(JPAPUnitInfo.java:750)
+	at com.ibm.ws.jpa.management.JPAPxmlInfo.extractPersistenceUnits(JPAPxmlInfo.java:182)
+	at com.ibm.ws.jpa.management.JPAScopeInfo.processPersistenceUnit(JPAScopeInfo.java:88)
+	at com.ibm.ws.jpa.management.JPAApplInfo.addPersistenceUnits(JPAApplInfo.java:119)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.processWebModulePersistenceXml(JPAComponentImpl.java:515)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.applicationStarting(JPAComponentImpl.java:304)
+	at com.ibm.ws.container.service.state.internal.ApplicationStateManager.fireStarting(ApplicationStateManager.java:51)
+	at com.ibm.ws.container.service.state.internal.StateChangeServiceImpl.fireApplicationStarting(StateChangeServiceImpl.java:50)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.preDeployApp(SimpleDeployedAppInfoBase.java:547)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.installApp(SimpleDeployedAppInfoBase.java:508)
+	at com.ibm.ws.app.manager.module.internal.DeployedAppInfoBase.deployApp(DeployedAppInfoBase.java:349)
+	at com.ibm.ws.app.manager.war.internal.WARApplicationHandlerImpl.install(WARApplicationHandlerImpl.java:65)
+	at com.ibm.ws.app.manager.internal.statemachine.StartAction.execute(StartAction.java:144)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.enterState(ApplicationStateMachineImpl.java:1317)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.run(ApplicationStateMachineImpl.java:897)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.RuntimeException: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:122)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:216)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:213)
+	... 38 more
+Caused by: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.classNotFound(JDBCDriverService.java:224)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:348)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.createAnyPreferLegacyOrder(JDBCDriverService.java:405)
+	at com.ibm.ws.jdbc.DataSourceService.init(DataSourceService.java:610)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:522)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:519)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.initPrivileged(AbstractConnectionFactoryService.java:519)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.createResource(AbstractConnectionFactoryService.java:149)
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:120)
+	... 41 more
+Caused by: java.lang.ClassNotFoundException: org.h2.jdbcx.JdbcDataSource
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClassCommonLibraryClassLoaders(AppClassLoader.java:569)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClass(AppClassLoader.java:291)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findOrDelegateLoadClass(AppClassLoader.java:547)
+	at com.ibm.ws.classloading.internal.AppClassLoader.loadClass(AppClassLoader.java:505)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:272)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:262)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:262)
+	... 49 more
+ Event:org.osgi.framework.FrameworkEvent[source=com.ibm.ws.jdbc_1.0.46.cl201120201014-1215 [180]] 
+[11/11/2020, 16:31:32:087 CET] 00000013 LogService-180-com.ibm.ws.jdbc                               E CWWKE0701E: FrameworkEvent ERROR org.osgi.framework.ServiceException: Exception in com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService()
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:226)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:114)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:48)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:530)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:494)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:685)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$0(WSContextFactory.java:81)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$1(WSContextFactory.java:81)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at com.ibm.ws.jndi.internal.WSContextFactory.getService(WSContextFactory.java:81)
+	at com.ibm.ws.jndi.internal.WSContext.getReference(WSContext.java:520)
+	at com.ibm.ws.jndi.internal.WSContext.resolveObject(WSContext.java:139)
+	at com.ibm.ws.jndi.internal.WSContext.lookup(WSContext.java:309)
+	at com.ibm.ws.jndi.WSContextBase.lookup(WSContextBase.java:61)
+	at org.apache.aries.jndi.DelegateContext.lookup(DelegateContext.java:149)
+	at java.naming/javax.naming.InitialContext.lookup(InitialContext.java:409)
+	at com.ibm.ws.jpa.container.osgi.internal.OSGiJPAPUnitInfo.lookupDataSource(OSGiJPAPUnitInfo.java:317)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJPADataSource(JPAPUnitInfo.java:337)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJtaDataSource(JPAPUnitInfo.java:380)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1889)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:350)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:316)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.createEMFactory(JPAPUnitInfo.java:919)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.initialize(JPAPUnitInfo.java:766)
+	at com.ibm.ws.jpa.management.JPAPxmlInfo.extractPersistenceUnits(JPAPxmlInfo.java:182)
+	at com.ibm.ws.jpa.management.JPAScopeInfo.processPersistenceUnit(JPAScopeInfo.java:88)
+	at com.ibm.ws.jpa.management.JPAApplInfo.addPersistenceUnits(JPAApplInfo.java:119)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.processWebModulePersistenceXml(JPAComponentImpl.java:515)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.applicationStarting(JPAComponentImpl.java:304)
+	at com.ibm.ws.container.service.state.internal.ApplicationStateManager.fireStarting(ApplicationStateManager.java:51)
+	at com.ibm.ws.container.service.state.internal.StateChangeServiceImpl.fireApplicationStarting(StateChangeServiceImpl.java:50)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.preDeployApp(SimpleDeployedAppInfoBase.java:547)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.installApp(SimpleDeployedAppInfoBase.java:508)
+	at com.ibm.ws.app.manager.module.internal.DeployedAppInfoBase.deployApp(DeployedAppInfoBase.java:349)
+	at com.ibm.ws.app.manager.war.internal.WARApplicationHandlerImpl.install(WARApplicationHandlerImpl.java:65)
+	at com.ibm.ws.app.manager.internal.statemachine.StartAction.execute(StartAction.java:144)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.enterState(ApplicationStateMachineImpl.java:1317)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.run(ApplicationStateMachineImpl.java:897)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.RuntimeException: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:122)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:216)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:213)
+	... 42 more
+Caused by: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.classNotFound(JDBCDriverService.java:224)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:348)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.createAnyPreferLegacyOrder(JDBCDriverService.java:405)
+	at com.ibm.ws.jdbc.DataSourceService.init(DataSourceService.java:610)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:522)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:519)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.initPrivileged(AbstractConnectionFactoryService.java:519)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.createResource(AbstractConnectionFactoryService.java:149)
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:120)
+	... 45 more
+Caused by: java.lang.ClassNotFoundException: org.h2.jdbcx.JdbcDataSource
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClassCommonLibraryClassLoaders(AppClassLoader.java:569)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClass(AppClassLoader.java:291)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findOrDelegateLoadClass(AppClassLoader.java:547)
+	at com.ibm.ws.classloading.internal.AppClassLoader.loadClass(AppClassLoader.java:505)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:272)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:262)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:262)
+	... 53 more
+ Event:org.osgi.framework.FrameworkEvent[source=com.ibm.ws.jdbc_1.0.46.cl201120201014-1215 [180]] 
+[11/11/2020, 16:31:32:644 CET] 00000013 LogService-180-com.ibm.ws.jdbc                               E CWWKE0701E: FrameworkEvent ERROR org.osgi.framework.ServiceException: Exception in com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService()
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:226)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:114)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:48)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:530)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:494)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:685)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$0(WSContextFactory.java:81)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$1(WSContextFactory.java:81)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at com.ibm.ws.jndi.internal.WSContextFactory.getService(WSContextFactory.java:81)
+	at com.ibm.ws.jndi.internal.WSContext.getReference(WSContext.java:520)
+	at com.ibm.ws.jndi.internal.WSContext.resolveObject(WSContext.java:139)
+	at com.ibm.ws.jndi.internal.WSContext.lookup(WSContext.java:309)
+	at com.ibm.ws.jndi.WSContextBase.lookup(WSContextBase.java:61)
+	at org.apache.aries.jndi.DelegateContext.lookup(DelegateContext.java:149)
+	at java.naming/javax.naming.InitialContext.lookup(InitialContext.java:409)
+	at com.ibm.ws.jpa.container.osgi.internal.OSGiJPAPUnitInfo.lookupDataSource(OSGiJPAPUnitInfo.java:317)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJPADataSource(JPAPUnitInfo.java:337)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJtaDataSource(JPAPUnitInfo.java:380)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.updateLogins(EntityManagerSetupImpl.java:2488)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.updateSession(EntityManagerSetupImpl.java:2796)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:751)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:222)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getDatabaseSession(EntityManagerFactoryDelegate.java:200)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.getDatabaseSession(EntityManagerFactoryImpl.java:542)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:388)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:316)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.createEMFactory(JPAPUnitInfo.java:919)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.initialize(JPAPUnitInfo.java:766)
+	at com.ibm.ws.jpa.management.JPAPxmlInfo.extractPersistenceUnits(JPAPxmlInfo.java:182)
+	at com.ibm.ws.jpa.management.JPAScopeInfo.processPersistenceUnit(JPAScopeInfo.java:88)
+	at com.ibm.ws.jpa.management.JPAApplInfo.addPersistenceUnits(JPAApplInfo.java:119)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.processWebModulePersistenceXml(JPAComponentImpl.java:515)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.applicationStarting(JPAComponentImpl.java:304)
+	at com.ibm.ws.container.service.state.internal.ApplicationStateManager.fireStarting(ApplicationStateManager.java:51)
+	at com.ibm.ws.container.service.state.internal.StateChangeServiceImpl.fireApplicationStarting(StateChangeServiceImpl.java:50)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.preDeployApp(SimpleDeployedAppInfoBase.java:547)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.installApp(SimpleDeployedAppInfoBase.java:508)
+	at com.ibm.ws.app.manager.module.internal.DeployedAppInfoBase.deployApp(DeployedAppInfoBase.java:349)
+	at com.ibm.ws.app.manager.war.internal.WARApplicationHandlerImpl.install(WARApplicationHandlerImpl.java:65)
+	at com.ibm.ws.app.manager.internal.statemachine.StartAction.execute(StartAction.java:144)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.enterState(ApplicationStateMachineImpl.java:1317)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.run(ApplicationStateMachineImpl.java:897)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.RuntimeException: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:122)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:216)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:213)
+	... 47 more
+Caused by: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.classNotFound(JDBCDriverService.java:224)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:348)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.createAnyPreferLegacyOrder(JDBCDriverService.java:405)
+	at com.ibm.ws.jdbc.DataSourceService.init(DataSourceService.java:610)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:522)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:519)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.initPrivileged(AbstractConnectionFactoryService.java:519)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.createResource(AbstractConnectionFactoryService.java:149)
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:120)
+	... 50 more
+Caused by: java.lang.ClassNotFoundException: org.h2.jdbcx.JdbcDataSource
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClassCommonLibraryClassLoaders(AppClassLoader.java:569)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClass(AppClassLoader.java:291)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findOrDelegateLoadClass(AppClassLoader.java:547)
+	at com.ibm.ws.classloading.internal.AppClassLoader.loadClass(AppClassLoader.java:505)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:272)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:262)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:262)
+	... 58 more
+ Event:org.osgi.framework.FrameworkEvent[source=com.ibm.ws.jdbc_1.0.46.cl201120201014-1215 [180]] 
+[11/11/2020, 16:31:32:637 CET] 00000027 eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d
+[11/11/2020, 16:31:32:660 CET] 00000027 eclipselink.connection                                       I CWWJP9990I: [eclipselink.connection] Not able to detect platform for vendor name [Generic Component Context DataSource[Generic Component Context DataSource : jdbc/FilmDatabase, 0]]. Defaulting to [org.eclipse.persistence.platform.database.DatabasePlatform]. The database dialect used may not match with the database you are using. Please explicitly provide a platform using property "eclipselink.target-database".
+[11/11/2020, 16:31:32:960 CET] 00000027 com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[11/11/2020, 16:31:33:007 CET] 00000027 org.jboss.weld.Version                                       I WELD-000900: 3.1.4 (Final)
+[11/11/2020, 16:31:34:217 CET] 00000027 org.jboss.weld.Event                                         I WELD-000411: Observer method [BackedAnnotatedMethod] org.apache.myfaces.config.annotation.CdiAnnotationProviderExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
+[11/11/2020, 16:31:34:224 CET] 00000027 org.jboss.weld.Event                                         I WELD-000411: Observer method [BackedAnnotatedMethod] org.apache.myfaces.cdi.JsfArtifactProducerExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
+[11/11/2020, 16:31:35:146 CET] 00000027 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: film-database-1.0-SNAPSHOT.
+[11/11/2020, 16:31:35:149 CET] 00000027 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module film-database-1.0-SNAPSHOT has been bound to default_host.
+[11/11/2020, 16:31:35:151 CET] 00000027 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9080/film_database/
+[11/11/2020, 16:31:35:203 CET] 0000002b com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/film_database
+[11/11/2020, 16:31:35:214 CET] 0000002b com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[11/11/2020, 16:31:35:231 CET] 00000027 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[11/11/2020, 16:31:35:481 CET] 0000002b org.apache.myfaces.ee.MyFacesContainerInitializer            I Using org.apache.myfaces.ee.MyFacesContainerInitializer
+[11/11/2020, 16:31:35:689 CET] 0000002b org.apache.myfaces.config.DefaultFacesConfigurationProvider  I Reading standard config META-INF/standard-faces-config.xml
+[11/11/2020, 16:31:35:924 CET] 0000002b org.apache.myfaces.config.DefaultFacesConfigurationProvider  I Found javax.faces.application.ApplicationFactory factory implementation: com.ibm.ws.jsf.config.WASApplicationFactoryImpl
+[11/11/2020, 16:31:36:089 CET] 0000002b org.apache.myfaces.spi.impl.DefaultInjectionProviderFactory  I Using InjectionProvider com.ibm.ws.jsf.spi.impl.WASCDIAnnotationDelegateInjectionProvider
+[11/11/2020, 16:31:36:394 CET] 0000002b org.apache.myfaces.util.ExternalSpecifications               I MyFaces CDI support enabled
+[11/11/2020, 16:31:36:396 CET] 0000002b org.apache.myfaces.util.ExternalSpecifications               I MyFaces Bean Validation support disabled
+[11/11/2020, 16:31:37:036 CET] 0000002b org.apache.myfaces.config.FacesConfigurator                  I Serialization provider : class org.apache.myfaces.shared_impl.util.serial.DefaultSerialFactory
+[11/11/2020, 16:31:37:130 CET] 0000002b org.apache.myfaces.webapp.AbstractFacesInitializer           I ServletContext initialized.
+[11/11/2020, 16:31:37:134 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I Tomahawk jar not available. Autoscrolling, DetectJavascript, AddResourceClass and CheckExtensionsFilter are disabled now.
+[11/11/2020, 16:31:37:134 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I Scanning for context init parameters not defined. It is not necessary to define them all into your web.xml, they are just provided here for informative purposes. To disable this messages set org.apache.myfaces.LOG_WEB_CONTEXT_PARAMS config param to 'false'
+[11/11/2020, 16:31:37:134 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.RESOURCE_EXCLUDES' found, using default value '.class .jsp .jspx .properties .xhtml .groovy'.
+[11/11/2020, 16:31:37:134 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.STATE_SAVING_METHOD' found, using default value 'server'.
+[11/11/2020, 16:31:37:134 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FULL_STATE_SAVING_VIEW_IDS' found.
+[11/11/2020, 16:31:37:134 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.PARTIAL_STATE_SAVING' found, using default value 'true (false with 1.2 webapps)'.
+[11/11/2020, 16:31:37:135 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.SERIALIZE_SERVER_STATE' found, using default value 'false'.
+[11/11/2020, 16:31:37:135 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.DEFAULT_SUFFIX' found, using default value '.xhtml .view.xml .jsp'.
+[11/11/2020, 16:31:37:135 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_SUFFIX' found, using default value '.xhtml'.
+[11/11/2020, 16:31:37:135 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_VIEW_MAPPINGS' found.
+[11/11/2020, 16:31:37:135 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.DISABLE_FACELET_JSF_VIEWHANDLER' found.
+[11/11/2020, 16:31:37:136 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_BUFFER_SIZE' found, using default value '1024'.
+[11/11/2020, 16:31:37:136 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_DECORATORS' found.
+[11/11/2020, 16:31:37:136 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_LIBRARIES' found.
+[11/11/2020, 16:31:37:136 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_REFRESH_PERIOD' found, using default value '-1'.
+[11/11/2020, 16:31:37:136 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_SKIP_COMMENTS' found.
+[11/11/2020, 16:31:37:136 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.HONOR_CURRENT_COMPONENT_ATTRIBUTES' found, using default value 'false'.
+[11/11/2020, 16:31:37:136 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.VALIDATE_EMPTY_FIELDS' found, using default value 'auto'.
+[11/11/2020, 16:31:37:140 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL' found, using default value 'false'.
+[11/11/2020, 16:31:37:142 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CLEAR_INPUT_WHEN_SUBMITTED_VALUE_IS_NULL_OR_EMPTY' found, using default value 'true'.
+[11/11/2020, 16:31:37:142 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.ALWAYS_PERFORM_VALIDATION_WHEN_REQUIRED_IS_TRUE' found, using default value 'false'.
+[11/11/2020, 16:31:37:143 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.VIEWROOT_PHASE_LISTENER_QUEUES_EXCEPTIONS' found, using default value 'false'.
+[11/11/2020, 16:31:37:144 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE' found, using default value 'false'.
+[11/11/2020, 16:31:37:144 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ENUM_CONVERTER_ALLOW_STRING_PASSTROUGH' found, using default value 'false'.
+[11/11/2020, 16:31:37:146 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.validator.DISABLE_DEFAULT_BEAN_VALIDATOR' found, using default value 'true'.
+[11/11/2020, 16:31:37:146 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.validator.ENABLE_VALIDATE_WHOLE_BEAN' found, using default value 'false'.
+[11/11/2020, 16:31:37:147 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.CONFIG_FILES' found.
+[11/11/2020, 16:31:37:148 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.LIFECYCLE_ID' found.
+[11/11/2020, 16:31:37:148 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.DISABLE_FACESSERVLET_TO_XHTML' found.
+[11/11/2020, 16:31:37:149 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CHECKED_VIEWID_CACHE_SIZE' found, using default value '500'.
+[11/11/2020, 16:31:37:153 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CHECKED_VIEWID_CACHE_ENABLED' found, using default value 'true'.
+[11/11/2020, 16:31:37:154 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.PRETTY_HTML' found, using default value 'true'.
+[11/11/2020, 16:31:37:154 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALLOW_JAVASCRIPT' found, using default value 'true'.
+[11/11/2020, 16:31:37:155 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CONFIG_REFRESH_PERIOD' found, using default value '2'.
+[11/11/2020, 16:31:37:155 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEWSTATE_JAVASCRIPT' found, using default value 'false'.
+[11/11/2020, 16:31:37:155 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_VIEWSTATE_ID' found, using default value 'true'.
+[11/11/2020, 16:31:37:156 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_XHTML_LINKS' found, using default value 'true'.
+[11/11/2020, 16:31:37:156 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_CLEAR_JAVASCRIPT_FOR_BUTTON' found, using default value 'false'.
+[11/11/2020, 16:31:37:156 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_HIDDEN_FIELDS_FOR_LINK_PARAMS' found, using default value 'false'.
+[11/11/2020, 16:31:37:156 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SAVE_FORM_SUBMIT_LINK_IE' found, using default value 'false'.
+[11/11/2020, 16:31:37:156 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DELEGATE_FACES_SERVLET' found.
+[11/11/2020, 16:31:37:156 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.REFRESH_TRANSIENT_BUILD_ON_PSS' found, using default value 'auto'.
+[11/11/2020, 16:31:37:156 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.REFRESH_TRANSIENT_BUILD_ON_PSS_PRESERVE_STATE' found, using default value 'false'.
+[11/11/2020, 16:31:37:157 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VALIDATE_XML' found.
+[11/11/2020, 16:31:37:157 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.WRAP_SCRIPT_CONTENT_WITH_XML_COMMENT_TAG' found, using default value 'false'.
+[11/11/2020, 16:31:37:157 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_FORM_SUBMIT_SCRIPT_INLINE' found, using default value 'false'.
+[11/11/2020, 16:31:37:157 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DEBUG_PHASE_LISTENER' found.
+[11/11/2020, 16:31:37:157 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_CC_EL_RESOLVER' found, using default value 'false'.
+[11/11/2020, 16:31:37:157 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DEFAULT_RESPONSE_WRITER_CONTENT_TYPE_MODE' found, using default value 'text/html'.
+[11/11/2020, 16:31:37:158 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_UNIQUE_IDS_CACHE_ENABLED' found, using default value 'true'.
+[11/11/2020, 16:31:37:158 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.COMPONENT_UNIQUE_IDS_CACHE_SIZE' found, using default value '100'.
+[11/11/2020, 16:31:37:158 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SUPPORT_JSP_AND_FACES_EL' found, using default value 'true'.
+[11/11/2020, 16:31:37:158 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SUPPORT_MANAGED_BEANS' found, using default value 'true'.
+[11/11/2020, 16:31:37:272 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.GAE_JSF_JAR_FILES' found.
+[11/11/2020, 16:31:37:273 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.GAE_JSF_ANNOTATIONS_JAR_FILES' found.
+[11/11/2020, 16:31:37:273 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_VIEW_NOT_FOUND' found, using default value 'false'.
+[11/11/2020, 16:31:37:273 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EARLY_FLUSH_ENABLED' found, using default value 'false'.
+[11/11/2020, 16:31:37:273 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_FACELETS_COMPATIBILITY' found, using default value 'false'.
+[11/11/2020, 16:31:37:273 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_FORM_VIEW_STATE_AT_BEGIN' found, using default value 'false'.
+[11/11/2020, 16:31:37:273 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.FLASH_SCOPE_DISABLED' found, using default value 'false'.
+[11/11/2020, 16:31:37:273 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.NUMBER_OF_VIEWS_IN_SESSION' found, using default value '20'.
+[11/11/2020, 16:31:37:274 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.NUMBER_OF_SEQUENTIAL_VIEWS_IN_SESSION' found, using default value '4'.
+[11/11/2020, 16:31:37:274 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.NUMBER_OF_FLASH_TOKENS_IN_SESSION' found.
+[11/11/2020, 16:31:37:274 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.FACES_FLOW_CLIENT_WINDOW_IDS_IN_SESSION' found.
+[11/11/2020, 16:31:37:274 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SUPPORT_EL_3_IMPORT_HANDLER' found, using default value 'false'.
+[11/11/2020, 16:31:37:274 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_ORIGIN_HEADER_APP_PATH' found, using default value 'false'.
+[11/11/2020, 16:31:37:274 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALWAYS_FORCE_SESSION_CREATION' found, using default value 'true'.
+[11/11/2020, 16:31:37:274 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_MAX_TIME_EXPIRES' found, using default value '604800000'.
+[11/11/2020, 16:31:37:274 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_HANDLER_CACHE_SIZE' found, using default value '500'.
+[11/11/2020, 16:31:37:275 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_HANDLER_CACHE_ENABLED' found, using default value 'true'.
+[11/11/2020, 16:31:37:275 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.USE_ENCRYPTION' found, using default value 'true'.
+[11/11/2020, 16:31:37:275 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SECRET' found.
+[11/11/2020, 16:31:37:275 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALGORITHM' found, using default value 'DES'.
+[11/11/2020, 16:31:37:275 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SECRET.CACHE' found.
+[11/11/2020, 16:31:37:275 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALGORITHM.IV' found.
+[11/11/2020, 16:31:37:275 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALGORITHM.PARAMETERS' found, using default value 'ECB/PKCS5Padding'.
+[11/11/2020, 16:31:37:275 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SERIAL_FACTORY' found.
+[11/11/2020, 16:31:37:275 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.COMPRESS_STATE_IN_CLIENT' found, using default value 'false'.
+[11/11/2020, 16:31:37:275 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.MAC_ALGORITHM' found, using default value 'HmacSHA1'.
+[11/11/2020, 16:31:37:275 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.MAC_SECRET' found.
+[11/11/2020, 16:31:37:276 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.MAC_SECRET.CACHE' found.
+[11/11/2020, 16:31:37:276 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.LAZY_LOAD_CONFIG_OBJECTS' found, using default value 'true'.
+[11/11/2020, 16:31:37:277 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_ALLOW_SLASH_LIBRARY_NAME' found, using default value 'false'.
+[11/11/2020, 16:31:37:277 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_BUFFER_SIZE' found, using default value '2048'.
+[11/11/2020, 16:31:37:277 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN' found, using default value 'none'.
+[11/11/2020, 16:31:37:277 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN_LENGTH' found, using default value '16'.
+[11/11/2020, 16:31:37:277 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN_SECURE_RANDOM_CLASS' found.
+[11/11/2020, 16:31:37:277 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN_SECURE_RANDOM_PROVIDER' found.
+[11/11/2020, 16:31:37:277 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN_SECURE_RANDOM_ALGORITM' found, using default value 'SHA1PRNG'.
+[11/11/2020, 16:31:37:278 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CLIENT_VIEW_STATE_TIMEOUT' found, using default value '0'.
+[11/11/2020, 16:31:37:611 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SERIALIZE_STATE_IN_SESSION' found, using default value 'false'.
+[11/11/2020, 16:31:37:611 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.COMPRESS_STATE_IN_SESSION' found, using default value 'true'.
+[11/11/2020, 16:31:37:611 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.USE_FLASH_SCOPE_PURGE_VIEWS_IN_SESSION' found, using default value 'false'.
+[11/11/2020, 16:31:37:611 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN' found, using default value 'random'.
+[11/11/2020, 16:31:37:611 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN_LENGTH' found, using default value '8'.
+[11/11/2020, 16:31:37:611 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN_SECURE_RANDOM_CLASS' found.
+[11/11/2020, 16:31:37:612 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN_SECURE_RANDOM_PROVIDER' found.
+[11/11/2020, 16:31:37:612 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN_SECURE_RANDOM_ALGORITM' found, using default value 'SHA1PRNG'.
+[11/11/2020, 16:31:37:612 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'facelets.LIBRARIES' found.
+[11/11/2020, 16:31:37:612 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VALIDATE' found, using default value 'false'.
+[11/11/2020, 16:31:37:612 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.annotation.USE_CDI_FOR_ANNOTATION_SCANNING' found.
+[11/11/2020, 16:31:37:612 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.annotation.SCAN_PACKAGES' found.
+[11/11/2020, 16:31:37:612 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.config.annotation.LifecycleProvider' found.
+[11/11/2020, 16:31:37:612 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.WEBSOCKET_ENDPOINT_PORT' found.
+[11/11/2020, 16:31:37:612 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.INITIALIZE_SKIP_JAR_FACES_CONFIG_SCAN' found, using default value 'false'.
+[11/11/2020, 16:31:37:612 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EL_RESOLVER_COMPARATOR' found.
+[11/11/2020, 16:31:37:613 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EL_RESOLVER_PREDICATE' found.
+[11/11/2020, 16:31:37:613 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DEFAULT_WINDOW_MODE' found, using default value 'url'.
+[11/11/2020, 16:31:37:613 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.WEBSOCKET_MAX_IDLE_TIMEOUT' found, using default value '300000'.
+[11/11/2020, 16:31:37:613 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_WEBSOCKET_SESSION_TOKEN' found, using default value 'none'.
+[11/11/2020, 16:31:37:613 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ERROR_TEMPLATE_RESOURCE' found, using default value 'META-INF/rsc/myfaces-dev-error.xml'.
+[11/11/2020, 16:31:37:613 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DEBUG_TEMPLATE_RESOURCE' found, using default value 'META-INF/rsc/myfaces-dev-debug.xml'.
+[11/11/2020, 16:31:37:613 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ERROR_HANDLING' found, using default value 'false, on Development Project stage: true'.
+[11/11/2020, 16:31:37:613 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.AUTOCOMPLETE_OFF_VIEW_STATE' found, using default value 'true'.
+[11/11/2020, 16:31:37:613 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.USE_MULTIPLE_JS_FILES_FOR_JSF_UNCOMPRESSED_JS' found, using default value 'false'.
+[11/11/2020, 16:31:37:614 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.JSF_JS_MODE' found, using default value 'normal'.
+[11/11/2020, 16:31:37:614 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.TEMPORAL_RESOURCEHANDLER_CACHE_ENABLED' found, using default value 'false'.
+[11/11/2020, 16:31:37:614 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SERVICE_PROVIDER_FINDER' found.
+[11/11/2020, 16:31:37:614 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.spi.InjectionProvider' found.
+[11/11/2020, 16:31:37:614 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.DISABLE_FACELET_JSF_VIEWHANDLER' found, using default value 'false'.
+[11/11/2020, 16:31:37:614 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CHECK_ID_PRODUCTION_MODE' found, using default value 'auto'.
+[11/11/2020, 16:31:37:614 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'facelets.BUFFER_SIZE' found.
+[11/11/2020, 16:31:37:614 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'facelets.REFRESH_PERIOD' found, using default value '-1'.
+[11/11/2020, 16:31:37:614 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_RESOURCE_RESOLVER' found.
+[11/11/2020, 16:31:37:614 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'facelets.RESOURCE_RESOLVER' found.
+[11/11/2020, 16:31:37:614 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.MARK_INITIAL_STATE_WHEN_APPLY_BUILD_VIEW' found, using default value 'false'.
+[11/11/2020, 16:31:37:615 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'facelets.DECORATORS' found.
+[11/11/2020, 16:31:37:615 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.WRAP_TAG_EXCEPTIONS_AS_CONTEXT_AWARE' found, using default value 'true'.
+[11/11/2020, 16:31:37:615 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CACHE_EL_EXPRESSIONS' found, using default value 'noCache'.
+[11/11/2020, 16:31:37:615 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_POOL_MAX_POOL_SIZE' found, using default value '5'.
+[11/11/2020, 16:31:37:615 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_POOL_MAX_DYNAMIC_PARTIAL_LIMIT' found, using default value '2'.
+[11/11/2020, 16:31:37:615 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_POOL_ENTRY_MODE' found, using default value 'soft'.
+[11/11/2020, 16:31:37:615 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_POOL_DEFERRED_NAVIGATION' found, using default value 'false'.
+[11/11/2020, 16:31:37:615 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.validator.BEAN_BEFORE_JSF_VALIDATION' found, using default value 'false'.
+[11/11/2020, 16:31:37:615 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.JSP_SUFFIX' found, using default value '.jsp'.
+[11/11/2020, 16:31:37:616 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EXPRESSION_FACTORY' found.
+[11/11/2020, 16:31:37:616 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.INITIALIZE_ALWAYS_STANDALONE' found, using default value 'false'.
+[11/11/2020, 16:31:37:616 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.LOG_WEB_CONTEXT_PARAMS' found, using default value 'auto'.
+[11/11/2020, 16:31:37:616 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.AUTOMATIC_EXTENSIONLESS_MAPPING' found, using default value 'false'.
+[11/11/2020, 16:31:37:616 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.FACES_INITIALIZER' found.
+[11/11/2020, 16:31:37:616 CET] 0000002b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.FACES_INIT_PLUGINS' found.
+[11/11/2020, 16:31:37:620 CET] 0000002b org.apache.myfaces.webapp.AbstractFacesInitializer           W 
+
+*******************************************************************
+*** WARNING: Apache MyFaces-2 is running in DEVELOPMENT mode.   ***
+***                                         ^^^^^^^^^^^         ***
+*** Do NOT deploy to your live server(s) without changing this. ***
+*** See Application#getProjectStage() for more information.     ***
+*******************************************************************
+
+[11/11/2020, 16:31:37:620 CET] 0000002b org.apache.myfaces.webapp.StartupServletContextListener      I MyFaces Core has started, it took [2011] ms.
+[11/11/2020, 16:31:37:761 CET] 00000013 LogService-180-com.ibm.ws.jdbc                               E CWWKE0701E: FrameworkEvent ERROR org.osgi.framework.ServiceException: Exception in com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService()
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:226)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:114)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:48)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:530)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:494)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:685)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$0(WSContextFactory.java:81)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$1(WSContextFactory.java:81)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at com.ibm.ws.jndi.internal.WSContextFactory.getService(WSContextFactory.java:81)
+	at com.ibm.ws.jndi.internal.WSContext.getReference(WSContext.java:520)
+	at com.ibm.ws.jndi.internal.WSContext.resolveObject(WSContext.java:139)
+	at com.ibm.ws.jndi.internal.WSContext.lookup(WSContext.java:309)
+	at com.ibm.ws.jndi.WSContextBase.lookup(WSContextBase.java:61)
+	at org.apache.aries.jndi.DelegateContext.lookup(DelegateContext.java:149)
+	at java.naming/javax.naming.InitialContext.lookup(InitialContext.java:409)
+	at com.ibm.ws.jpa.container.osgi.internal.OSGiJPAPUnitInfo.lookupDataSource(OSGiJPAPUnitInfo.java:317)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJPADataSource(JPAPUnitInfo.java:337)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.lookupJtaDataSource(JPAPUnitInfo.java:424)
+	at com.ibm.ws.jpa.management.JPACompPUnitInfo.getJtaDataSource(JPACompPUnitInfo.java:137)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1889)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:350)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:316)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.createEMFactory(JPAPUnitInfo.java:919)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getEntityManagerFactory(JPAPUnitInfo.java:833)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getEntityManagerPool(JPAPUnitInfo.java:1006)
+	at com.ibm.ws.jpa.management.JPATxEntityManager.<init>(JPATxEntityManager.java:147)
+	at com.ibm.ws.jpa.container.v22.JPATxEntityManagerV22.<init>(JPATxEntityManagerV22.java:45)
+	at com.ibm.ws.jpa.container.v22.internal.JPA22Runtime.createJPATxEntityManager(JPA22Runtime.java:71)
+	at com.ibm.ws.jpa.management.AbstractJPAComponent.getEntityManager(AbstractJPAComponent.java:255)
+	at com.ibm.ws.jpa.container.osgi.jndi.JPAJndiLookupObjectFactory.getObjectInstance(JPAJndiLookupObjectFactory.java:149)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObjectInstance(InjectionBinding.java:1552)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObject(InjectionBinding.java:1428)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectableObject(InjectionBinding.java:1368)
+	at com.ibm.wsspi.injectionengine.InjectionTarget.inject(InjectionTarget.java:104)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.inject(WebSphereInjectionServicesImpl.java:198)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.inject(WebSphereInjectionServicesImpl.java:150)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.access$000(WebSphereInjectionServicesImpl.java:74)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl$1.run(WebSphereInjectionServicesImpl.java:134)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl$1.run(WebSphereInjectionServicesImpl.java:130)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.callInject(WebSphereInjectionServicesImpl.java:130)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.injectJavaEEResources(WebSphereInjectionServicesImpl.java:112)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.aroundInject(WebSphereInjectionServicesImpl.java:317)
+	at org.jboss.weld.injection.InjectionContextImpl.run(InjectionContextImpl.java:46)
+	at org.jboss.weld.injection.producer.ResourceInjector.inject(ResourceInjector.java:71)
+	at org.jboss.weld.injection.producer.BasicInjectionTarget.inject(BasicInjectionTarget.java:117)
+	at org.jboss.weld.bean.ManagedBean.create(ManagedBean.java:161)
+	at org.jboss.weld.contexts.AbstractContext.get(AbstractContext.java:96)
+	at org.jboss.weld.bean.ContextualInstanceStrategy$DefaultContextualInstanceStrategy.get(ContextualInstanceStrategy.java:100)
+	at org.jboss.weld.bean.ContextualInstanceStrategy$CachingContextualInstanceStrategy.get(ContextualInstanceStrategy.java:177)
+	at org.jboss.weld.bean.ContextualInstance.get(ContextualInstance.java:50)
+	at org.jboss.weld.bean.proxy.ContextBeanInstance.getInstance(ContextBeanInstance.java:102)
+	at org.jboss.weld.bean.proxy.ProxyMethodHandler.getInstance(ProxyMethodHandler.java:131)
+	at film_database.director.repository.DirectorRepository$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.director.service.DirectorService.create(DirectorService.java:57)
+	at film_database.director.service.DirectorService$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.configuration.InitializedData.init(InitializedData.java:78)
+	at film_database.configuration.InitializedData.contextInitialized(InitializedData.java:44)
+	at jdk.internal.reflect.GeneratedMethodAccessor628.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:95)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:85)
+	at org.jboss.weld.injection.MethodInvocationStrategy$SimpleMethodInvocationStrategy.invoke(MethodInvocationStrategy.java:168)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:330)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:308)
+	at org.jboss.weld.event.ObserverMethodImpl.notify(ObserverMethodImpl.java:286)
+	at javax.enterprise.inject.spi.ObserverMethod.notify(ObserverMethod.java:124)
+	at org.jboss.weld.util.Observers.notify(Observers.java:166)
+	at org.jboss.weld.event.ObserverNotifier.notifySyncObservers(ObserverNotifier.java:285)
+	at org.jboss.weld.event.ObserverNotifier.notify(ObserverNotifier.java:273)
+	at org.jboss.weld.event.ObserverNotifier.fireEvent(ObserverNotifier.java:177)
+	at org.jboss.weld.bootstrap.BeanDeploymentModule.fireEvent(BeanDeploymentModule.java:93)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.fireEventForApplicationScope(HttpContextLifecycle.java:161)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.contextInitialized(HttpContextLifecycle.java:147)
+	at org.jboss.weld.module.web.servlet.WeldInitialListener.contextInitialized(WeldInitialListener.java:99)
+	at com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated(WebApp.java:2437)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.notifyServletContextCreated(WebApp31.java:514)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:1041)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:6683)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApp(DynamicVirtualHost.java:470)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApplication(DynamicVirtualHost.java:465)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.startWebApplication(WebContainer.java:1178)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.access$100(WebContainer.java:109)
+	at com.ibm.ws.webcontainer.osgi.WebContainer$3.run(WebContainer.java:975)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.RuntimeException: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:122)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:216)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:213)
+	... 91 more
+Caused by: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.classNotFound(JDBCDriverService.java:224)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:348)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.createAnyPreferLegacyOrder(JDBCDriverService.java:405)
+	at com.ibm.ws.jdbc.DataSourceService.init(DataSourceService.java:610)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:522)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:519)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.initPrivileged(AbstractConnectionFactoryService.java:519)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.createResource(AbstractConnectionFactoryService.java:149)
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:120)
+	... 94 more
+Caused by: java.lang.ClassNotFoundException: org.h2.jdbcx.JdbcDataSource
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClassCommonLibraryClassLoaders(AppClassLoader.java:569)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClass(AppClassLoader.java:291)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findOrDelegateLoadClass(AppClassLoader.java:547)
+	at com.ibm.ws.classloading.internal.AppClassLoader.loadClass(AppClassLoader.java:505)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:272)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:262)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:262)
+	... 102 more
+ Event:org.osgi.framework.FrameworkEvent[source=com.ibm.ws.jdbc_1.0.46.cl201120201014-1215 [180]] 
+[11/11/2020, 16:31:37:788 CET] 0000002b com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "javax.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [my_db] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/FilmDatabase data source for the my_db persistence unit because it has encountered the following exception: javax.naming.NamingException: CWWKN0008E: An object could not be obtained for name jdbc/FilmDatabase.. com.ibm.ws.jpa.management.JPAPUnitInfo.createEMFactory 759" at ffdc_20.11.11_16.31.37.0.log
+[11/11/2020, 16:31:38:377 CET] 0000002b com.ibm.ws.jpa.management.JPAPUnitInfo                       E CWWJP0015E: An error occurred in the org.eclipse.persistence.jpa.PersistenceProvider persistence provider when it attempted to create the container entity manager factory for the my_db persistence unit. The following error occurred: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [my_db] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/FilmDatabase data source for the my_db persistence unit because it has encountered the following exception: javax.naming.NamingException: CWWKN0008E: An object could not be obtained for name jdbc/FilmDatabase..
+[11/11/2020, 16:31:38:392 CET] 0000002b com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "javax.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [my_db] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/FilmDatabase data source for the my_db persistence unit because it has encountered the following exception: javax.naming.NamingException: CWWKN0008E: An object could not be obtained for name jdbc/FilmDatabase.. com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObject 408" at ffdc_20.11.11_16.31.38.0.log
+[11/11/2020, 16:31:38:541 CET] 0000002b com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "com.ibm.wsspi.injectionengine.InjectionException: CWNEN0030E: The server was unable to obtain an object instance for the java:comp/env/film_database.director.repository.DirectorRepository/em reference.  The exception message was: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [my_db] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/FilmDatabase data source for the my_db persistence unit because it has encountered the following exception: javax.naming.NamingException: CWWKN0008E: An object could not be obtained for name jdbc/FilmDatabase.. com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl 199" at ffdc_20.11.11_16.31.38.1.log
+[11/11/2020, 16:31:38:541 CET] 0000002b bm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl E CWOWB1000E: A CDI error has occurred: CWNEN0030E: The server was unable to obtain an object instance for the java:comp/env/film_database.director.repository.DirectorRepository/em reference.  The exception message was: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [my_db] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/FilmDatabase data source for the my_db persistence unit because it has encountered the following exception: javax.naming.NamingException: CWWKN0008E: An object could not be obtained for name jdbc/FilmDatabase..
+[11/11/2020, 16:31:38:609 CET] 0000002b com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "com.ibm.wsspi.injectionengine.InjectionException: CWNEN0030E: The server was unable to obtain an object instance for the java:comp/env/film_database.director.repository.DirectorRepository/em reference.  The exception message was: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [my_db] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/FilmDatabase data source for the my_db persistence unit because it has encountered the following exception: javax.naming.NamingException: CWWKN0008E: An object could not be obtained for name jdbc/FilmDatabase.. com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.inject 248" at ffdc_20.11.11_16.31.38.2.log
+[11/11/2020, 16:31:38:961 CET] 0000002b com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.security.PrivilegedActionException: com.ibm.wsspi.injectionengine.InjectionException: CWNEN0030E: The server was unable to obtain an object instance for the java:comp/env/film_database.director.repository.DirectorRepository/em reference.  The exception message was: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [my_db] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/FilmDatabase data source for the my_db persistence unit because it has encountered the following exception: javax.naming.NamingException: CWWKN0008E: An object could not be obtained for name jdbc/FilmDatabase.. com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl 116" at ffdc_20.11.11_16.31.38.3.log
+[11/11/2020, 16:31:38:962 CET] 0000002b bm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl E CWOWB1000E: A CDI error has occurred: CWNEN0030E: The server was unable to obtain an object instance for the java:comp/env/film_database.director.repository.DirectorRepository/em reference.  The exception message was: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [my_db] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/FilmDatabase data source for the my_db persistence unit because it has encountered the following exception: javax.naming.NamingException: CWWKN0008E: An object could not be obtained for name jdbc/FilmDatabase..
+[11/11/2020, 16:31:39:307 CET] 0000002b com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.NullPointerException com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated 1341" at ffdc_20.11.11_16.31.38.4.log
+[11/11/2020, 16:31:39:308 CET] 0000002b com.ibm.ws.webcontainer.webapp                               E SRVE0283E: Exception caught while initializing context: java.lang.NullPointerException
+	at film_database.director.repository.DirectorRepository.create(DirectorRepository.java:37)
+	at film_database.director.repository.DirectorRepository$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.director.service.DirectorService.create(DirectorService.java:57)
+	at film_database.director.service.DirectorService$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.configuration.InitializedData.init(InitializedData.java:78)
+	at film_database.configuration.InitializedData.contextInitialized(InitializedData.java:44)
+	at jdk.internal.reflect.GeneratedMethodAccessor628.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:95)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:85)
+	at org.jboss.weld.injection.MethodInvocationStrategy$SimpleMethodInvocationStrategy.invoke(MethodInvocationStrategy.java:168)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:330)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:308)
+	at org.jboss.weld.event.ObserverMethodImpl.notify(ObserverMethodImpl.java:286)
+	at javax.enterprise.inject.spi.ObserverMethod.notify(ObserverMethod.java:124)
+	at org.jboss.weld.util.Observers.notify(Observers.java:166)
+	at org.jboss.weld.event.ObserverNotifier.notifySyncObservers(ObserverNotifier.java:285)
+	at org.jboss.weld.event.ObserverNotifier.notify(ObserverNotifier.java:273)
+	at org.jboss.weld.event.ObserverNotifier.fireEvent(ObserverNotifier.java:177)
+	at org.jboss.weld.bootstrap.BeanDeploymentModule.fireEvent(BeanDeploymentModule.java:93)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.fireEventForApplicationScope(HttpContextLifecycle.java:161)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.contextInitialized(HttpContextLifecycle.java:147)
+	at org.jboss.weld.module.web.servlet.WeldInitialListener.contextInitialized(WeldInitialListener.java:99)
+	at com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated(WebApp.java:2437)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.notifyServletContextCreated(WebApp31.java:514)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:1041)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:6683)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApp(DynamicVirtualHost.java:470)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApplication(DynamicVirtualHost.java:465)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.startWebApplication(WebContainer.java:1178)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.access$100(WebContainer.java:109)
+	at com.ibm.ws.webcontainer.osgi.WebContainer$3.run(WebContainer.java:975)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[11/11/2020, 16:31:39:715 CET] 0000002b com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.NullPointerException com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated 1353" at ffdc_20.11.11_16.31.39.0.log
+[11/11/2020, 16:31:39:715 CET] 0000002b com.ibm.ws.webcontainer.webapp                               E SRVE0284E: Exception caught in notifyServletContextCreated: java.lang.NullPointerException
+	at film_database.director.repository.DirectorRepository.create(DirectorRepository.java:37)
+	at film_database.director.repository.DirectorRepository$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.director.service.DirectorService.create(DirectorService.java:57)
+	at film_database.director.service.DirectorService$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.configuration.InitializedData.init(InitializedData.java:78)
+	at film_database.configuration.InitializedData.contextInitialized(InitializedData.java:44)
+	at jdk.internal.reflect.GeneratedMethodAccessor628.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:95)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:85)
+	at org.jboss.weld.injection.MethodInvocationStrategy$SimpleMethodInvocationStrategy.invoke(MethodInvocationStrategy.java:168)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:330)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:308)
+	at org.jboss.weld.event.ObserverMethodImpl.notify(ObserverMethodImpl.java:286)
+	at javax.enterprise.inject.spi.ObserverMethod.notify(ObserverMethod.java:124)
+	at org.jboss.weld.util.Observers.notify(Observers.java:166)
+	at org.jboss.weld.event.ObserverNotifier.notifySyncObservers(ObserverNotifier.java:285)
+	at org.jboss.weld.event.ObserverNotifier.notify(ObserverNotifier.java:273)
+	at org.jboss.weld.event.ObserverNotifier.fireEvent(ObserverNotifier.java:177)
+	at org.jboss.weld.bootstrap.BeanDeploymentModule.fireEvent(BeanDeploymentModule.java:93)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.fireEventForApplicationScope(HttpContextLifecycle.java:161)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.contextInitialized(HttpContextLifecycle.java:147)
+	at org.jboss.weld.module.web.servlet.WeldInitialListener.contextInitialized(WeldInitialListener.java:99)
+	at com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated(WebApp.java:2437)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.notifyServletContextCreated(WebApp31.java:514)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:1041)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:6683)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApp(DynamicVirtualHost.java:470)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApplication(DynamicVirtualHost.java:465)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.startWebApplication(WebContainer.java:1178)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.access$100(WebContainer.java:109)
+	at com.ibm.ws.webcontainer.osgi.WebContainer$3.run(WebContainer.java:975)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[11/11/2020, 16:31:39:720 CET] 0000002b com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application film-database-1.0-SNAPSHOT started in 9.983 seconds.
+[11/11/2020, 16:31:39:755 CET] 00000023 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host kubernetes.docker.internal  (IPv4: 127.0.0.1) port 9080.
+[11/11/2020, 16:31:39:784 CET] 00000023 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [cdi-2.0, el-3.0, jaxrs-2.1, jaxrsClient-2.1, jdbc-4.2, jndi-1.0, jpa-2.2, jpaContainer-2.2, jsf-2.3, jsonb-1.0, jsonp-1.1, jsp-2.3, servlet-4.0].
+[11/11/2020, 16:31:39:784 CET] 00000023 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 12.034 seconds.
+[11/11/2020, 16:31:39:785 CET] 00000023 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The defaultServer server is ready to run a smarter planet. The defaultServer server started in 13.963 seconds.
+[11/11/2020, 16:31:47:612 CET] 0000002f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9080/film_database/
+[11/11/2020, 16:31:47:694 CET] 0000002f com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application film-database-1.0-SNAPSHOT has stopped successfully.
+[11/11/2020, 16:31:47:701 CET] 0000002f com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application film-database-1.0-SNAPSHOT.
+[11/11/2020, 16:31:47:702 CET] 0000002f bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The film-database-1.0-SNAPSHOT application is using the loose application definition at the C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\dropins\film-database-1.0-SNAPSHOT.war.xml location.
+[11/11/2020, 16:31:48:068 CET] 00000025 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[11/11/2020, 16:31:48:233 CET] 00000013 LogService-180-com.ibm.ws.jdbc                               E CWWKE0701E: FrameworkEvent ERROR org.osgi.framework.ServiceException: Exception in com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService()
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:226)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:114)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:48)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:530)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:494)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:685)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$0(WSContextFactory.java:81)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$1(WSContextFactory.java:81)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at com.ibm.ws.jndi.internal.WSContextFactory.getService(WSContextFactory.java:81)
+	at com.ibm.ws.jndi.internal.WSContext.getReference(WSContext.java:520)
+	at com.ibm.ws.jndi.internal.WSContext.resolveObject(WSContext.java:139)
+	at com.ibm.ws.jndi.internal.WSContext.lookup(WSContext.java:309)
+	at com.ibm.ws.jndi.WSContextBase.lookup(WSContextBase.java:61)
+	at org.apache.aries.jndi.DelegateContext.lookup(DelegateContext.java:149)
+	at java.naming/javax.naming.InitialContext.lookup(InitialContext.java:409)
+	at com.ibm.ws.jpa.container.osgi.internal.OSGiJPAPUnitInfo.lookupDataSource(OSGiJPAPUnitInfo.java:317)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJPADataSource(JPAPUnitInfo.java:337)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJtaDataSource(JPAPUnitInfo.java:380)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.initialize(JPAPUnitInfo.java:750)
+	at com.ibm.ws.jpa.management.JPAPxmlInfo.extractPersistenceUnits(JPAPxmlInfo.java:182)
+	at com.ibm.ws.jpa.management.JPAScopeInfo.processPersistenceUnit(JPAScopeInfo.java:88)
+	at com.ibm.ws.jpa.management.JPAApplInfo.addPersistenceUnits(JPAApplInfo.java:119)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.processWebModulePersistenceXml(JPAComponentImpl.java:515)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.applicationStarting(JPAComponentImpl.java:304)
+	at com.ibm.ws.container.service.state.internal.ApplicationStateManager.fireStarting(ApplicationStateManager.java:51)
+	at com.ibm.ws.container.service.state.internal.StateChangeServiceImpl.fireApplicationStarting(StateChangeServiceImpl.java:50)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.preDeployApp(SimpleDeployedAppInfoBase.java:547)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.installApp(SimpleDeployedAppInfoBase.java:508)
+	at com.ibm.ws.app.manager.module.internal.DeployedAppInfoBase.deployApp(DeployedAppInfoBase.java:349)
+	at com.ibm.ws.app.manager.war.internal.WARApplicationHandlerImpl.install(WARApplicationHandlerImpl.java:65)
+	at com.ibm.ws.app.manager.internal.statemachine.StartAction.execute(StartAction.java:144)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.enterState(ApplicationStateMachineImpl.java:1317)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.performAction(ApplicationStateMachineImpl.java:1182)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.run(ApplicationStateMachineImpl.java:905)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.RuntimeException: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:122)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:216)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:213)
+	... 39 more
+Caused by: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.classNotFound(JDBCDriverService.java:224)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:348)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.createAnyPreferLegacyOrder(JDBCDriverService.java:405)
+	at com.ibm.ws.jdbc.DataSourceService.init(DataSourceService.java:610)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:522)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:519)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.initPrivileged(AbstractConnectionFactoryService.java:519)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.createResource(AbstractConnectionFactoryService.java:149)
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:120)
+	... 42 more
+Caused by: java.lang.ClassNotFoundException: org.h2.jdbcx.JdbcDataSource
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClassCommonLibraryClassLoaders(AppClassLoader.java:569)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClass(AppClassLoader.java:291)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findOrDelegateLoadClass(AppClassLoader.java:547)
+	at com.ibm.ws.classloading.internal.AppClassLoader.loadClass(AppClassLoader.java:505)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:272)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:262)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:262)
+	... 50 more
+ Event:org.osgi.framework.FrameworkEvent[source=com.ibm.ws.jdbc_1.0.46.cl201120201014-1215 [180]] 
+[11/11/2020, 16:31:48:237 CET] 00000013 LogService-180-com.ibm.ws.jdbc                               E CWWKE0701E: FrameworkEvent ERROR org.osgi.framework.ServiceException: Exception in com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService()
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:226)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:114)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:48)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:530)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:494)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:685)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$0(WSContextFactory.java:81)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$1(WSContextFactory.java:81)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at com.ibm.ws.jndi.internal.WSContextFactory.getService(WSContextFactory.java:81)
+	at com.ibm.ws.jndi.internal.WSContext.getReference(WSContext.java:520)
+	at com.ibm.ws.jndi.internal.WSContext.resolveObject(WSContext.java:139)
+	at com.ibm.ws.jndi.internal.WSContext.lookup(WSContext.java:309)
+	at com.ibm.ws.jndi.WSContextBase.lookup(WSContextBase.java:61)
+	at org.apache.aries.jndi.DelegateContext.lookup(DelegateContext.java:149)
+	at java.naming/javax.naming.InitialContext.lookup(InitialContext.java:409)
+	at com.ibm.ws.jpa.container.osgi.internal.OSGiJPAPUnitInfo.lookupDataSource(OSGiJPAPUnitInfo.java:317)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJPADataSource(JPAPUnitInfo.java:337)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJtaDataSource(JPAPUnitInfo.java:380)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1889)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:350)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:316)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.createEMFactory(JPAPUnitInfo.java:919)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.initialize(JPAPUnitInfo.java:766)
+	at com.ibm.ws.jpa.management.JPAPxmlInfo.extractPersistenceUnits(JPAPxmlInfo.java:182)
+	at com.ibm.ws.jpa.management.JPAScopeInfo.processPersistenceUnit(JPAScopeInfo.java:88)
+	at com.ibm.ws.jpa.management.JPAApplInfo.addPersistenceUnits(JPAApplInfo.java:119)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.processWebModulePersistenceXml(JPAComponentImpl.java:515)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.applicationStarting(JPAComponentImpl.java:304)
+	at com.ibm.ws.container.service.state.internal.ApplicationStateManager.fireStarting(ApplicationStateManager.java:51)
+	at com.ibm.ws.container.service.state.internal.StateChangeServiceImpl.fireApplicationStarting(StateChangeServiceImpl.java:50)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.preDeployApp(SimpleDeployedAppInfoBase.java:547)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.installApp(SimpleDeployedAppInfoBase.java:508)
+	at com.ibm.ws.app.manager.module.internal.DeployedAppInfoBase.deployApp(DeployedAppInfoBase.java:349)
+	at com.ibm.ws.app.manager.war.internal.WARApplicationHandlerImpl.install(WARApplicationHandlerImpl.java:65)
+	at com.ibm.ws.app.manager.internal.statemachine.StartAction.execute(StartAction.java:144)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.enterState(ApplicationStateMachineImpl.java:1317)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.performAction(ApplicationStateMachineImpl.java:1182)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.run(ApplicationStateMachineImpl.java:905)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.RuntimeException: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:122)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:216)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:213)
+	... 43 more
+Caused by: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.classNotFound(JDBCDriverService.java:224)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:348)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.createAnyPreferLegacyOrder(JDBCDriverService.java:405)
+	at com.ibm.ws.jdbc.DataSourceService.init(DataSourceService.java:610)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:522)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:519)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.initPrivileged(AbstractConnectionFactoryService.java:519)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.createResource(AbstractConnectionFactoryService.java:149)
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:120)
+	... 46 more
+Caused by: java.lang.ClassNotFoundException: org.h2.jdbcx.JdbcDataSource
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClassCommonLibraryClassLoaders(AppClassLoader.java:569)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClass(AppClassLoader.java:291)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findOrDelegateLoadClass(AppClassLoader.java:547)
+	at com.ibm.ws.classloading.internal.AppClassLoader.loadClass(AppClassLoader.java:505)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:272)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:262)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:262)
+	... 54 more
+ Event:org.osgi.framework.FrameworkEvent[source=com.ibm.ws.jdbc_1.0.46.cl201120201014-1215 [180]] 
+[11/11/2020, 16:31:48:368 CET] 0000002f eclipselink                                                  I CWWJP9990I: [eclipselink] EclipseLink, version: Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d
+[11/11/2020, 16:31:48:373 CET] 0000002f eclipselink.connection                                       I CWWJP9990I: [eclipselink.connection] Not able to detect platform for vendor name [Generic Component Context DataSource[Generic Component Context DataSource : jdbc/FilmDatabase, 0]]. Defaulting to [org.eclipse.persistence.platform.database.DatabasePlatform]. The database dialect used may not match with the database you are using. Please explicitly provide a platform using property "eclipselink.target-database".
+[11/11/2020, 16:31:48:384 CET] 00000013 LogService-180-com.ibm.ws.jdbc                               E CWWKE0701E: FrameworkEvent ERROR org.osgi.framework.ServiceException: Exception in com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService()
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:226)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:114)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:48)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:530)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:494)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:685)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$0(WSContextFactory.java:81)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$1(WSContextFactory.java:81)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at com.ibm.ws.jndi.internal.WSContextFactory.getService(WSContextFactory.java:81)
+	at com.ibm.ws.jndi.internal.WSContext.getReference(WSContext.java:520)
+	at com.ibm.ws.jndi.internal.WSContext.resolveObject(WSContext.java:139)
+	at com.ibm.ws.jndi.internal.WSContext.lookup(WSContext.java:309)
+	at com.ibm.ws.jndi.WSContextBase.lookup(WSContextBase.java:61)
+	at org.apache.aries.jndi.DelegateContext.lookup(DelegateContext.java:149)
+	at java.naming/javax.naming.InitialContext.lookup(InitialContext.java:409)
+	at com.ibm.ws.jpa.container.osgi.internal.OSGiJPAPUnitInfo.lookupDataSource(OSGiJPAPUnitInfo.java:317)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJPADataSource(JPAPUnitInfo.java:337)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJtaDataSource(JPAPUnitInfo.java:380)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.updateLogins(EntityManagerSetupImpl.java:2488)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.updateSession(EntityManagerSetupImpl.java:2796)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:751)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:222)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getDatabaseSession(EntityManagerFactoryDelegate.java:200)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.getDatabaseSession(EntityManagerFactoryImpl.java:542)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:388)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:316)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.createEMFactory(JPAPUnitInfo.java:919)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.initialize(JPAPUnitInfo.java:766)
+	at com.ibm.ws.jpa.management.JPAPxmlInfo.extractPersistenceUnits(JPAPxmlInfo.java:182)
+	at com.ibm.ws.jpa.management.JPAScopeInfo.processPersistenceUnit(JPAScopeInfo.java:88)
+	at com.ibm.ws.jpa.management.JPAApplInfo.addPersistenceUnits(JPAApplInfo.java:119)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.processWebModulePersistenceXml(JPAComponentImpl.java:515)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.applicationStarting(JPAComponentImpl.java:304)
+	at com.ibm.ws.container.service.state.internal.ApplicationStateManager.fireStarting(ApplicationStateManager.java:51)
+	at com.ibm.ws.container.service.state.internal.StateChangeServiceImpl.fireApplicationStarting(StateChangeServiceImpl.java:50)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.preDeployApp(SimpleDeployedAppInfoBase.java:547)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.installApp(SimpleDeployedAppInfoBase.java:508)
+	at com.ibm.ws.app.manager.module.internal.DeployedAppInfoBase.deployApp(DeployedAppInfoBase.java:349)
+	at com.ibm.ws.app.manager.war.internal.WARApplicationHandlerImpl.install(WARApplicationHandlerImpl.java:65)
+	at com.ibm.ws.app.manager.internal.statemachine.StartAction.execute(StartAction.java:144)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.enterState(ApplicationStateMachineImpl.java:1317)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.performAction(ApplicationStateMachineImpl.java:1182)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.run(ApplicationStateMachineImpl.java:905)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.RuntimeException: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:122)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:216)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:213)
+	... 48 more
+Caused by: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.classNotFound(JDBCDriverService.java:224)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:348)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.createAnyPreferLegacyOrder(JDBCDriverService.java:405)
+	at com.ibm.ws.jdbc.DataSourceService.init(DataSourceService.java:610)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:522)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:519)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.initPrivileged(AbstractConnectionFactoryService.java:519)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.createResource(AbstractConnectionFactoryService.java:149)
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:120)
+	... 51 more
+Caused by: java.lang.ClassNotFoundException: org.h2.jdbcx.JdbcDataSource
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClassCommonLibraryClassLoaders(AppClassLoader.java:569)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClass(AppClassLoader.java:291)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findOrDelegateLoadClass(AppClassLoader.java:547)
+	at com.ibm.ws.classloading.internal.AppClassLoader.loadClass(AppClassLoader.java:505)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:272)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:262)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:262)
+	... 59 more
+ Event:org.osgi.framework.FrameworkEvent[source=com.ibm.ws.jdbc_1.0.46.cl201120201014-1215 [180]] 
+[11/11/2020, 16:31:49:183 CET] 0000002f org.jboss.weld.Event                                         I WELD-000411: Observer method [BackedAnnotatedMethod] org.apache.myfaces.cdi.JsfArtifactProducerExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
+[11/11/2020, 16:31:49:189 CET] 0000002f org.jboss.weld.Event                                         I WELD-000411: Observer method [BackedAnnotatedMethod] org.apache.myfaces.config.annotation.CdiAnnotationProviderExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
+[11/11/2020, 16:31:49:326 CET] 0000002f com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: film-database-1.0-SNAPSHOT.
+[11/11/2020, 16:31:49:327 CET] 0000002f com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module film-database-1.0-SNAPSHOT has been bound to default_host.
+[11/11/2020, 16:31:49:327 CET] 0000002f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9080/film_database/
+[11/11/2020, 16:31:49:328 CET] 00000027 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/film_database
+[11/11/2020, 16:31:49:329 CET] 00000027 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[11/11/2020, 16:31:49:417 CET] 0000002f com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[11/11/2020, 16:31:49:500 CET] 00000027 org.apache.myfaces.ee.MyFacesContainerInitializer            I Using org.apache.myfaces.ee.MyFacesContainerInitializer
+[11/11/2020, 16:31:49:523 CET] 00000027 org.apache.myfaces.config.DefaultFacesConfigurationProvider  I Reading standard config META-INF/standard-faces-config.xml
+[11/11/2020, 16:31:49:582 CET] 00000027 org.apache.myfaces.config.DefaultFacesConfigurationProvider  I Found javax.faces.application.ApplicationFactory factory implementation: com.ibm.ws.jsf.config.WASApplicationFactoryImpl
+[11/11/2020, 16:31:49:640 CET] 00000027 org.apache.myfaces.spi.impl.DefaultInjectionProviderFactory  I Using InjectionProvider com.ibm.ws.jsf.spi.impl.WASCDIAnnotationDelegateInjectionProvider
+[11/11/2020, 16:31:49:691 CET] 00000027 org.apache.myfaces.config.FacesConfigurator                  I Serialization provider : class org.apache.myfaces.shared_impl.util.serial.DefaultSerialFactory
+[11/11/2020, 16:31:49:704 CET] 00000027 org.apache.myfaces.webapp.AbstractFacesInitializer           I ServletContext initialized.
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I Tomahawk jar not available. Autoscrolling, DetectJavascript, AddResourceClass and CheckExtensionsFilter are disabled now.
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I Scanning for context init parameters not defined. It is not necessary to define them all into your web.xml, they are just provided here for informative purposes. To disable this messages set org.apache.myfaces.LOG_WEB_CONTEXT_PARAMS config param to 'false'
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.RESOURCE_EXCLUDES' found, using default value '.class .jsp .jspx .properties .xhtml .groovy'.
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.STATE_SAVING_METHOD' found, using default value 'server'.
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FULL_STATE_SAVING_VIEW_IDS' found.
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.PARTIAL_STATE_SAVING' found, using default value 'true (false with 1.2 webapps)'.
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.SERIALIZE_SERVER_STATE' found, using default value 'false'.
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.DEFAULT_SUFFIX' found, using default value '.xhtml .view.xml .jsp'.
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_SUFFIX' found, using default value '.xhtml'.
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_VIEW_MAPPINGS' found.
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.DISABLE_FACELET_JSF_VIEWHANDLER' found.
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_BUFFER_SIZE' found, using default value '1024'.
+[11/11/2020, 16:31:49:705 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_DECORATORS' found.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_LIBRARIES' found.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_REFRESH_PERIOD' found, using default value '-1'.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_SKIP_COMMENTS' found.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.HONOR_CURRENT_COMPONENT_ATTRIBUTES' found, using default value 'false'.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.VALIDATE_EMPTY_FIELDS' found, using default value 'auto'.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL' found, using default value 'false'.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CLEAR_INPUT_WHEN_SUBMITTED_VALUE_IS_NULL_OR_EMPTY' found, using default value 'true'.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.ALWAYS_PERFORM_VALIDATION_WHEN_REQUIRED_IS_TRUE' found, using default value 'false'.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.VIEWROOT_PHASE_LISTENER_QUEUES_EXCEPTIONS' found, using default value 'false'.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE' found, using default value 'false'.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ENUM_CONVERTER_ALLOW_STRING_PASSTROUGH' found, using default value 'false'.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.validator.DISABLE_DEFAULT_BEAN_VALIDATOR' found, using default value 'true'.
+[11/11/2020, 16:31:49:706 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.validator.ENABLE_VALIDATE_WHOLE_BEAN' found, using default value 'false'.
+[11/11/2020, 16:31:49:707 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.CONFIG_FILES' found.
+[11/11/2020, 16:31:49:707 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.LIFECYCLE_ID' found.
+[11/11/2020, 16:31:49:707 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.DISABLE_FACESSERVLET_TO_XHTML' found.
+[11/11/2020, 16:31:49:707 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CHECKED_VIEWID_CACHE_SIZE' found, using default value '500'.
+[11/11/2020, 16:31:49:707 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CHECKED_VIEWID_CACHE_ENABLED' found, using default value 'true'.
+[11/11/2020, 16:31:49:851 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.PRETTY_HTML' found, using default value 'true'.
+[11/11/2020, 16:31:49:851 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALLOW_JAVASCRIPT' found, using default value 'true'.
+[11/11/2020, 16:31:49:851 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CONFIG_REFRESH_PERIOD' found, using default value '2'.
+[11/11/2020, 16:31:49:851 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEWSTATE_JAVASCRIPT' found, using default value 'false'.
+[11/11/2020, 16:31:49:851 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_VIEWSTATE_ID' found, using default value 'true'.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_XHTML_LINKS' found, using default value 'true'.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_CLEAR_JAVASCRIPT_FOR_BUTTON' found, using default value 'false'.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_HIDDEN_FIELDS_FOR_LINK_PARAMS' found, using default value 'false'.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SAVE_FORM_SUBMIT_LINK_IE' found, using default value 'false'.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DELEGATE_FACES_SERVLET' found.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.REFRESH_TRANSIENT_BUILD_ON_PSS' found, using default value 'auto'.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.REFRESH_TRANSIENT_BUILD_ON_PSS_PRESERVE_STATE' found, using default value 'false'.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VALIDATE_XML' found.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.WRAP_SCRIPT_CONTENT_WITH_XML_COMMENT_TAG' found, using default value 'false'.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_FORM_SUBMIT_SCRIPT_INLINE' found, using default value 'false'.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DEBUG_PHASE_LISTENER' found.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_CC_EL_RESOLVER' found, using default value 'false'.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DEFAULT_RESPONSE_WRITER_CONTENT_TYPE_MODE' found, using default value 'text/html'.
+[11/11/2020, 16:31:49:852 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_UNIQUE_IDS_CACHE_ENABLED' found, using default value 'true'.
+[11/11/2020, 16:31:49:853 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.COMPONENT_UNIQUE_IDS_CACHE_SIZE' found, using default value '100'.
+[11/11/2020, 16:31:49:853 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SUPPORT_JSP_AND_FACES_EL' found, using default value 'true'.
+[11/11/2020, 16:31:49:853 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SUPPORT_MANAGED_BEANS' found, using default value 'true'.
+[11/11/2020, 16:31:49:853 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.GAE_JSF_JAR_FILES' found.
+[11/11/2020, 16:31:49:853 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.GAE_JSF_ANNOTATIONS_JAR_FILES' found.
+[11/11/2020, 16:31:49:853 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_VIEW_NOT_FOUND' found, using default value 'false'.
+[11/11/2020, 16:31:49:853 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EARLY_FLUSH_ENABLED' found, using default value 'false'.
+[11/11/2020, 16:31:49:853 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_FACELETS_COMPATIBILITY' found, using default value 'false'.
+[11/11/2020, 16:31:49:853 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_FORM_VIEW_STATE_AT_BEGIN' found, using default value 'false'.
+[11/11/2020, 16:31:49:853 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.FLASH_SCOPE_DISABLED' found, using default value 'false'.
+[11/11/2020, 16:31:49:853 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.NUMBER_OF_VIEWS_IN_SESSION' found, using default value '20'.
+[11/11/2020, 16:31:49:854 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.NUMBER_OF_SEQUENTIAL_VIEWS_IN_SESSION' found, using default value '4'.
+[11/11/2020, 16:31:49:854 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.NUMBER_OF_FLASH_TOKENS_IN_SESSION' found.
+[11/11/2020, 16:31:49:854 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.FACES_FLOW_CLIENT_WINDOW_IDS_IN_SESSION' found.
+[11/11/2020, 16:31:49:854 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SUPPORT_EL_3_IMPORT_HANDLER' found, using default value 'false'.
+[11/11/2020, 16:31:49:854 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_ORIGIN_HEADER_APP_PATH' found, using default value 'false'.
+[11/11/2020, 16:31:49:854 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALWAYS_FORCE_SESSION_CREATION' found, using default value 'true'.
+[11/11/2020, 16:31:50:075 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_MAX_TIME_EXPIRES' found, using default value '604800000'.
+[11/11/2020, 16:31:50:075 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_HANDLER_CACHE_SIZE' found, using default value '500'.
+[11/11/2020, 16:31:50:075 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_HANDLER_CACHE_ENABLED' found, using default value 'true'.
+[11/11/2020, 16:31:50:075 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.USE_ENCRYPTION' found, using default value 'true'.
+[11/11/2020, 16:31:50:075 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SECRET' found.
+[11/11/2020, 16:31:50:075 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALGORITHM' found, using default value 'DES'.
+[11/11/2020, 16:31:50:076 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SECRET.CACHE' found.
+[11/11/2020, 16:31:50:077 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALGORITHM.IV' found.
+[11/11/2020, 16:31:50:077 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALGORITHM.PARAMETERS' found, using default value 'ECB/PKCS5Padding'.
+[11/11/2020, 16:31:50:077 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SERIAL_FACTORY' found.
+[11/11/2020, 16:31:50:077 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.COMPRESS_STATE_IN_CLIENT' found, using default value 'false'.
+[11/11/2020, 16:31:50:077 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.MAC_ALGORITHM' found, using default value 'HmacSHA1'.
+[11/11/2020, 16:31:50:077 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.MAC_SECRET' found.
+[11/11/2020, 16:31:50:077 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.MAC_SECRET.CACHE' found.
+[11/11/2020, 16:31:50:077 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.LAZY_LOAD_CONFIG_OBJECTS' found, using default value 'true'.
+[11/11/2020, 16:31:50:077 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_ALLOW_SLASH_LIBRARY_NAME' found, using default value 'false'.
+[11/11/2020, 16:31:50:077 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_BUFFER_SIZE' found, using default value '2048'.
+[11/11/2020, 16:31:50:077 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN' found, using default value 'none'.
+[11/11/2020, 16:31:50:077 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN_LENGTH' found, using default value '16'.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN_SECURE_RANDOM_CLASS' found.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN_SECURE_RANDOM_PROVIDER' found.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN_SECURE_RANDOM_ALGORITM' found, using default value 'SHA1PRNG'.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CLIENT_VIEW_STATE_TIMEOUT' found, using default value '0'.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SERIALIZE_STATE_IN_SESSION' found, using default value 'false'.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.COMPRESS_STATE_IN_SESSION' found, using default value 'true'.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.USE_FLASH_SCOPE_PURGE_VIEWS_IN_SESSION' found, using default value 'false'.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN' found, using default value 'random'.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN_LENGTH' found, using default value '8'.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN_SECURE_RANDOM_CLASS' found.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN_SECURE_RANDOM_PROVIDER' found.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN_SECURE_RANDOM_ALGORITM' found, using default value 'SHA1PRNG'.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'facelets.LIBRARIES' found.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VALIDATE' found, using default value 'false'.
+[11/11/2020, 16:31:50:078 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.annotation.USE_CDI_FOR_ANNOTATION_SCANNING' found.
+[11/11/2020, 16:31:50:079 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.annotation.SCAN_PACKAGES' found.
+[11/11/2020, 16:31:50:079 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.config.annotation.LifecycleProvider' found.
+[11/11/2020, 16:31:50:079 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.WEBSOCKET_ENDPOINT_PORT' found.
+[11/11/2020, 16:31:50:082 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.INITIALIZE_SKIP_JAR_FACES_CONFIG_SCAN' found, using default value 'false'.
+[11/11/2020, 16:31:50:082 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EL_RESOLVER_COMPARATOR' found.
+[11/11/2020, 16:31:50:083 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EL_RESOLVER_PREDICATE' found.
+[11/11/2020, 16:31:50:083 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DEFAULT_WINDOW_MODE' found, using default value 'url'.
+[11/11/2020, 16:31:50:083 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.WEBSOCKET_MAX_IDLE_TIMEOUT' found, using default value '300000'.
+[11/11/2020, 16:31:50:083 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_WEBSOCKET_SESSION_TOKEN' found, using default value 'none'.
+[11/11/2020, 16:31:50:083 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ERROR_TEMPLATE_RESOURCE' found, using default value 'META-INF/rsc/myfaces-dev-error.xml'.
+[11/11/2020, 16:31:50:083 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DEBUG_TEMPLATE_RESOURCE' found, using default value 'META-INF/rsc/myfaces-dev-debug.xml'.
+[11/11/2020, 16:31:50:083 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ERROR_HANDLING' found, using default value 'false, on Development Project stage: true'.
+[11/11/2020, 16:31:50:083 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.AUTOCOMPLETE_OFF_VIEW_STATE' found, using default value 'true'.
+[11/11/2020, 16:31:50:083 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.USE_MULTIPLE_JS_FILES_FOR_JSF_UNCOMPRESSED_JS' found, using default value 'false'.
+[11/11/2020, 16:31:50:083 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.JSF_JS_MODE' found, using default value 'normal'.
+[11/11/2020, 16:31:50:083 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.TEMPORAL_RESOURCEHANDLER_CACHE_ENABLED' found, using default value 'false'.
+[11/11/2020, 16:31:50:083 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SERVICE_PROVIDER_FINDER' found.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.spi.InjectionProvider' found.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.DISABLE_FACELET_JSF_VIEWHANDLER' found, using default value 'false'.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CHECK_ID_PRODUCTION_MODE' found, using default value 'auto'.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'facelets.BUFFER_SIZE' found.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'facelets.REFRESH_PERIOD' found, using default value '-1'.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'javax.faces.FACELETS_RESOURCE_RESOLVER' found.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'facelets.RESOURCE_RESOLVER' found.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.MARK_INITIAL_STATE_WHEN_APPLY_BUILD_VIEW' found, using default value 'false'.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'facelets.DECORATORS' found.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.WRAP_TAG_EXCEPTIONS_AS_CONTEXT_AWARE' found, using default value 'true'.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CACHE_EL_EXPRESSIONS' found, using default value 'noCache'.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_POOL_MAX_POOL_SIZE' found, using default value '5'.
+[11/11/2020, 16:31:50:084 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_POOL_MAX_DYNAMIC_PARTIAL_LIMIT' found, using default value '2'.
+[11/11/2020, 16:31:50:085 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_POOL_ENTRY_MODE' found, using default value 'soft'.
+[11/11/2020, 16:31:50:085 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_POOL_DEFERRED_NAVIGATION' found, using default value 'false'.
+[11/11/2020, 16:31:50:085 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.validator.BEAN_BEFORE_JSF_VALIDATION' found, using default value 'false'.
+[11/11/2020, 16:31:50:085 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.JSP_SUFFIX' found, using default value '.jsp'.
+[11/11/2020, 16:31:50:085 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EXPRESSION_FACTORY' found.
+[11/11/2020, 16:31:50:085 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.INITIALIZE_ALWAYS_STANDALONE' found, using default value 'false'.
+[11/11/2020, 16:31:50:085 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.LOG_WEB_CONTEXT_PARAMS' found, using default value 'auto'.
+[11/11/2020, 16:31:50:085 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.AUTOMATIC_EXTENSIONLESS_MAPPING' found, using default value 'false'.
+[11/11/2020, 16:31:50:085 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.FACES_INITIALIZER' found.
+[11/11/2020, 16:31:50:085 CET] 00000027 org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.FACES_INIT_PLUGINS' found.
+[11/11/2020, 16:31:50:608 CET] 00000027 org.apache.myfaces.webapp.AbstractFacesInitializer           W 
+
+*******************************************************************
+*** WARNING: Apache MyFaces-2 is running in DEVELOPMENT mode.   ***
+***                                         ^^^^^^^^^^^         ***
+*** Do NOT deploy to your live server(s) without changing this. ***
+*** See Application#getProjectStage() for more information.     ***
+*******************************************************************
+
+[11/11/2020, 16:31:50:608 CET] 00000027 org.apache.myfaces.webapp.StartupServletContextListener      I MyFaces Core has started, it took [1090] ms.
+[11/11/2020, 16:31:50:632 CET] 00000027 com.ibm.ws.jpa.management.JPAPUnitInfo                       E CWWJP0015E: An error occurred in the org.eclipse.persistence.jpa.PersistenceProvider persistence provider when it attempted to create the container entity manager factory for the my_db persistence unit. The following error occurred: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [my_db] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/FilmDatabase data source for the my_db persistence unit because it has encountered the following exception: javax.naming.NamingException: CWWKN0008E: An object could not be obtained for name jdbc/FilmDatabase..
+[11/11/2020, 16:31:50:632 CET] 00000027 bm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl E CWOWB1000E: A CDI error has occurred: CWNEN0030E: The server was unable to obtain an object instance for the java:comp/env/film_database.director.repository.DirectorRepository/em reference.  The exception message was: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [my_db] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/FilmDatabase data source for the my_db persistence unit because it has encountered the following exception: javax.naming.NamingException: CWWKN0008E: An object could not be obtained for name jdbc/FilmDatabase..
+[11/11/2020, 16:31:50:633 CET] 00000027 bm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl E CWOWB1000E: A CDI error has occurred: CWNEN0030E: The server was unable to obtain an object instance for the java:comp/env/film_database.director.repository.DirectorRepository/em reference.  The exception message was: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [my_db] failed.
+Internal Exception: javax.persistence.PersistenceException: CWWJP0013E: The server cannot locate the jdbc/FilmDatabase data source for the my_db persistence unit because it has encountered the following exception: javax.naming.NamingException: CWWKN0008E: An object could not be obtained for name jdbc/FilmDatabase..
+[11/11/2020, 16:31:50:634 CET] 00000027 com.ibm.ws.webcontainer.webapp                               E SRVE0283E: Exception caught while initializing context: java.lang.NullPointerException
+	at film_database.director.repository.DirectorRepository.create(DirectorRepository.java:37)
+	at film_database.director.repository.DirectorRepository$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.director.service.DirectorService.create(DirectorService.java:57)
+	at film_database.director.service.DirectorService$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.configuration.InitializedData.init(InitializedData.java:78)
+	at film_database.configuration.InitializedData.contextInitialized(InitializedData.java:44)
+	at jdk.internal.reflect.GeneratedMethodAccessor650.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:95)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:85)
+	at org.jboss.weld.injection.MethodInvocationStrategy$SimpleMethodInvocationStrategy.invoke(MethodInvocationStrategy.java:168)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:330)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:308)
+	at org.jboss.weld.event.ObserverMethodImpl.notify(ObserverMethodImpl.java:286)
+	at javax.enterprise.inject.spi.ObserverMethod.notify(ObserverMethod.java:124)
+	at org.jboss.weld.util.Observers.notify(Observers.java:166)
+	at org.jboss.weld.event.ObserverNotifier.notifySyncObservers(ObserverNotifier.java:285)
+	at org.jboss.weld.event.ObserverNotifier.notify(ObserverNotifier.java:273)
+	at org.jboss.weld.event.ObserverNotifier.fireEvent(ObserverNotifier.java:177)
+	at org.jboss.weld.bootstrap.BeanDeploymentModule.fireEvent(BeanDeploymentModule.java:93)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.fireEventForApplicationScope(HttpContextLifecycle.java:161)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.contextInitialized(HttpContextLifecycle.java:147)
+	at org.jboss.weld.module.web.servlet.WeldInitialListener.contextInitialized(WeldInitialListener.java:99)
+	at com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated(WebApp.java:2437)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.notifyServletContextCreated(WebApp31.java:514)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:1041)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:6683)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApp(DynamicVirtualHost.java:470)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApplication(DynamicVirtualHost.java:465)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.startWebApplication(WebContainer.java:1178)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.access$100(WebContainer.java:109)
+	at com.ibm.ws.webcontainer.osgi.WebContainer$3.run(WebContainer.java:975)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[11/11/2020, 16:31:50:635 CET] 00000027 com.ibm.ws.webcontainer.webapp                               E SRVE0284E: Exception caught in notifyServletContextCreated: java.lang.NullPointerException
+	at film_database.director.repository.DirectorRepository.create(DirectorRepository.java:37)
+	at film_database.director.repository.DirectorRepository$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.director.service.DirectorService.create(DirectorService.java:57)
+	at film_database.director.service.DirectorService$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.configuration.InitializedData.init(InitializedData.java:78)
+	at film_database.configuration.InitializedData.contextInitialized(InitializedData.java:44)
+	at jdk.internal.reflect.GeneratedMethodAccessor650.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:95)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:85)
+	at org.jboss.weld.injection.MethodInvocationStrategy$SimpleMethodInvocationStrategy.invoke(MethodInvocationStrategy.java:168)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:330)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:308)
+	at org.jboss.weld.event.ObserverMethodImpl.notify(ObserverMethodImpl.java:286)
+	at javax.enterprise.inject.spi.ObserverMethod.notify(ObserverMethod.java:124)
+	at org.jboss.weld.util.Observers.notify(Observers.java:166)
+	at org.jboss.weld.event.ObserverNotifier.notifySyncObservers(ObserverNotifier.java:285)
+	at org.jboss.weld.event.ObserverNotifier.notify(ObserverNotifier.java:273)
+	at org.jboss.weld.event.ObserverNotifier.fireEvent(ObserverNotifier.java:177)
+	at org.jboss.weld.bootstrap.BeanDeploymentModule.fireEvent(BeanDeploymentModule.java:93)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.fireEventForApplicationScope(HttpContextLifecycle.java:161)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.contextInitialized(HttpContextLifecycle.java:147)
+	at org.jboss.weld.module.web.servlet.WeldInitialListener.contextInitialized(WeldInitialListener.java:99)
+	at com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated(WebApp.java:2437)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.notifyServletContextCreated(WebApp31.java:514)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:1041)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:6683)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApp(DynamicVirtualHost.java:470)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApplication(DynamicVirtualHost.java:465)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.startWebApplication(WebContainer.java:1178)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.access$100(WebContainer.java:109)
+	at com.ibm.ws.webcontainer.osgi.WebContainer$3.run(WebContainer.java:975)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+[11/11/2020, 16:31:50:644 CET] 00000013 LogService-180-com.ibm.ws.jdbc                               E CWWKE0701E: FrameworkEvent ERROR org.osgi.framework.ServiceException: Exception in com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService()
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:226)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:114)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:48)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:530)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:494)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:685)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$0(WSContextFactory.java:81)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jndi.internal.WSContextFactory.lambda$getService$1(WSContextFactory.java:81)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at com.ibm.ws.jndi.internal.WSContextFactory.getService(WSContextFactory.java:81)
+	at com.ibm.ws.jndi.internal.WSContext.getReference(WSContext.java:520)
+	at com.ibm.ws.jndi.internal.WSContext.resolveObject(WSContext.java:139)
+	at com.ibm.ws.jndi.internal.WSContext.lookup(WSContext.java:309)
+	at com.ibm.ws.jndi.WSContextBase.lookup(WSContextBase.java:61)
+	at org.apache.aries.jndi.DelegateContext.lookup(DelegateContext.java:149)
+	at java.naming/javax.naming.InitialContext.lookup(InitialContext.java:409)
+	at com.ibm.ws.jpa.container.osgi.internal.OSGiJPAPUnitInfo.lookupDataSource(OSGiJPAPUnitInfo.java:317)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getJPADataSource(JPAPUnitInfo.java:337)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.lookupJtaDataSource(JPAPUnitInfo.java:424)
+	at com.ibm.ws.jpa.management.JPACompPUnitInfo.getJtaDataSource(JPACompPUnitInfo.java:137)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:1889)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:350)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:316)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.createEMFactory(JPAPUnitInfo.java:919)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getEntityManagerFactory(JPAPUnitInfo.java:833)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getEntityManagerPool(JPAPUnitInfo.java:1006)
+	at com.ibm.ws.jpa.management.JPATxEntityManager.<init>(JPATxEntityManager.java:147)
+	at com.ibm.ws.jpa.container.v22.JPATxEntityManagerV22.<init>(JPATxEntityManagerV22.java:45)
+	at com.ibm.ws.jpa.container.v22.internal.JPA22Runtime.createJPATxEntityManager(JPA22Runtime.java:71)
+	at com.ibm.ws.jpa.management.AbstractJPAComponent.getEntityManager(AbstractJPAComponent.java:255)
+	at com.ibm.ws.jpa.container.osgi.jndi.JPAJndiLookupObjectFactory.getObjectInstance(JPAJndiLookupObjectFactory.java:149)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObjectInstance(InjectionBinding.java:1552)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObject(InjectionBinding.java:1428)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectableObject(InjectionBinding.java:1368)
+	at com.ibm.wsspi.injectionengine.InjectionTarget.inject(InjectionTarget.java:104)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.inject(WebSphereInjectionServicesImpl.java:198)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.inject(WebSphereInjectionServicesImpl.java:150)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.access$000(WebSphereInjectionServicesImpl.java:74)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl$1.run(WebSphereInjectionServicesImpl.java:134)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl$1.run(WebSphereInjectionServicesImpl.java:130)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.callInject(WebSphereInjectionServicesImpl.java:130)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.injectJavaEEResources(WebSphereInjectionServicesImpl.java:112)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.aroundInject(WebSphereInjectionServicesImpl.java:317)
+	at org.jboss.weld.injection.InjectionContextImpl.run(InjectionContextImpl.java:46)
+	at org.jboss.weld.injection.producer.ResourceInjector.inject(ResourceInjector.java:71)
+	at org.jboss.weld.injection.producer.BasicInjectionTarget.inject(BasicInjectionTarget.java:117)
+	at org.jboss.weld.bean.ManagedBean.create(ManagedBean.java:161)
+	at org.jboss.weld.contexts.AbstractContext.get(AbstractContext.java:96)
+	at org.jboss.weld.bean.ContextualInstanceStrategy$DefaultContextualInstanceStrategy.get(ContextualInstanceStrategy.java:100)
+	at org.jboss.weld.bean.ContextualInstanceStrategy$CachingContextualInstanceStrategy.get(ContextualInstanceStrategy.java:177)
+	at org.jboss.weld.bean.ContextualInstance.get(ContextualInstance.java:50)
+	at org.jboss.weld.bean.proxy.ContextBeanInstance.getInstance(ContextBeanInstance.java:102)
+	at org.jboss.weld.bean.proxy.ProxyMethodHandler.getInstance(ProxyMethodHandler.java:131)
+	at film_database.director.repository.DirectorRepository$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.director.service.DirectorService.create(DirectorService.java:57)
+	at film_database.director.service.DirectorService$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.configuration.InitializedData.init(InitializedData.java:78)
+	at film_database.configuration.InitializedData.contextInitialized(InitializedData.java:44)
+	at jdk.internal.reflect.GeneratedMethodAccessor650.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:95)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:85)
+	at org.jboss.weld.injection.MethodInvocationStrategy$SimpleMethodInvocationStrategy.invoke(MethodInvocationStrategy.java:168)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:330)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:308)
+	at org.jboss.weld.event.ObserverMethodImpl.notify(ObserverMethodImpl.java:286)
+	at javax.enterprise.inject.spi.ObserverMethod.notify(ObserverMethod.java:124)
+	at org.jboss.weld.util.Observers.notify(Observers.java:166)
+	at org.jboss.weld.event.ObserverNotifier.notifySyncObservers(ObserverNotifier.java:285)
+	at org.jboss.weld.event.ObserverNotifier.notify(ObserverNotifier.java:273)
+	at org.jboss.weld.event.ObserverNotifier.fireEvent(ObserverNotifier.java:177)
+	at org.jboss.weld.bootstrap.BeanDeploymentModule.fireEvent(BeanDeploymentModule.java:93)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.fireEventForApplicationScope(HttpContextLifecycle.java:161)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.contextInitialized(HttpContextLifecycle.java:147)
+	at org.jboss.weld.module.web.servlet.WeldInitialListener.contextInitialized(WeldInitialListener.java:99)
+	at com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated(WebApp.java:2437)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.notifyServletContextCreated(WebApp31.java:514)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:1041)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:6683)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApp(DynamicVirtualHost.java:470)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApplication(DynamicVirtualHost.java:465)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.startWebApplication(WebContainer.java:1178)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.access$100(WebContainer.java:109)
+	at com.ibm.ws.webcontainer.osgi.WebContainer$3.run(WebContainer.java:975)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.RuntimeException: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:122)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:216)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:213)
+	... 91 more
+Caused by: java.sql.SQLNonTransientException: DSRA4000E: No implementations of org.h2.jdbcx.JdbcDataSource are found for dataSource[FilmDatabaseDataSource] with library H2JDBCLib. The name or location of JDBC driver JAR files might be incorrect or inaccessible. Searched in: []. Searched under packages: [org.h2.jdbcx].
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.classNotFound(JDBCDriverService.java:224)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:348)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.createAnyPreferLegacyOrder(JDBCDriverService.java:405)
+	at com.ibm.ws.jdbc.DataSourceService.init(DataSourceService.java:610)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:522)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService$2.run(AbstractConnectionFactoryService.java:519)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.initPrivileged(AbstractConnectionFactoryService.java:519)
+	at com.ibm.ws.jca.cm.AbstractConnectionFactoryService.createResource(AbstractConnectionFactoryService.java:149)
+	at com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1.getService(ResourceFactoryTrackerData.java:120)
+	... 94 more
+Caused by: java.lang.ClassNotFoundException: org.h2.jdbcx.JdbcDataSource
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClassCommonLibraryClassLoaders(AppClassLoader.java:569)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClass(AppClassLoader.java:291)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findOrDelegateLoadClass(AppClassLoader.java:547)
+	at com.ibm.ws.classloading.internal.AppClassLoader.loadClass(AppClassLoader.java:505)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:272)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService$1.run(JDBCDriverService.java:262)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.jdbc.internal.JDBCDriverService.create(JDBCDriverService.java:262)
+	... 102 more
+ Event:org.osgi.framework.FrameworkEvent[source=com.ibm.ws.jdbc_1.0.46.cl201120201014-1215 [180]] 
+[11/11/2020, 16:31:50:900 CET] 00000027 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application film-database-1.0-SNAPSHOT updated in 3.199 seconds.
+[11/11/2020, 16:32:01:629 CET] 00000015 com.ibm.ws.kernel.launch.internal.ServerCommandListener      A CWWKE0055I: Server shutdown requested on Wednesday, 11 November 2020 at 16:32. The server defaultServer is shutting down.
+[11/11/2020, 16:32:01:633 CET] 0000003c com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
+[11/11/2020, 16:32:01:641 CET] 0000002b com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host kubernetes.docker.internal  (IPv4: 127.0.0.1) port 9080.
+[11/11/2020, 16:32:01:642 CET] 0000002b com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9080/film_database/
+[11/11/2020, 16:32:02:660 CET] 0000003c com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[11/11/2020, 16:32:02:709 CET] 0000002a com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application film-database-1.0-SNAPSHOT has stopped successfully.
+[11/11/2020, 16:32:03:268 CET] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server defaultServer stopped after 37.446 seconds.

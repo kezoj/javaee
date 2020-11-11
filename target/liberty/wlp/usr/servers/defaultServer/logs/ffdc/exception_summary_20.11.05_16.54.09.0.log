@@ -1,6 +1,0 @@
-
- Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
-------+------+---------------------------+---------------------------+---------------------------
-     0      1 05/11/2020, 16:54:09:518 CET 05/11/2020, 16:54:09:518 CET java.lang.IllegalArgumentException com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters 1105
-                                                                            - C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_20.11.05_16.54.09.0.log
-------+------+---------------------------+---------------------------+---------------------------

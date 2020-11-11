@@ -1,52 +1,54 @@
 package film_database.director.repository;
 
 import film_database.datastore.DataStore;
-import film_database.repository.Repository;
 import film_database.director.entity.Director;
+import film_database.repository.Repository;
+import javax.enterprise.context.RequestScoped;
 
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 import java.util.Optional;
 
-@Dependent
+@RequestScoped
 public class DirectorRepository implements Repository<Director, Long> {
 
-    /**
-     * Underlying data store.
-     */
-    private DataStore store;
+    private EntityManager em;
 
-    /**
-     * @param store data store
-     */
-    @Inject
-    public DirectorRepository(DataStore store) {
-        this.store = store;
+    @PersistenceContext
+    public void setEm(EntityManager em) {
+        this.em = em;
     }
 
     @Override
     public Optional<Director> find(Long id) {
-        return store.findDirector(id);
+        return Optional.ofNullable(em.find(Director.class, id));
     }
 
     @Override
-    public List<Director> findAll()  {
-        return store.findAllDirectors();
+    public List<Director> findAll() {
+        return em.createQuery("select c from Director c", Director.class).getResultList();
     }
 
     @Override
     public void create(Director entity) {
-        store.createDirector(entity);
+        em.persist(entity);
     }
 
     @Override
     public void delete(Director entity) {
-        store.deleteDirector(entity.getId());
+        em.remove(em.find(Director.class, entity.getId()));
     }
 
     @Override
     public void update(Director entity) {
-        store.updateDirector(entity);
+        em.merge(entity);
+    }
+
+    @Override
+    public void detach(Director entity) {
+        em.detach(entity);
     }
 }

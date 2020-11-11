@@ -5,23 +5,36 @@ import film_database.director.entity.Director;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+
 
 @Getter
 @Setter
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-@ToString
-@EqualsAndHashCode
+@ToString(callSuper = true)
+@Entity
+@Table(name = "films")
 public class Film implements Serializable {
 
+    @Getter
+    @Id
+    @GeneratedValue
     public Long id;
-    public Director director;
-    public FilmDistributor filmDistributor;
+
     public LocalDate releaseDate;
     public String title;
     public String genere;
+
+    @ManyToOne
+    @JoinColumn(name = "filmDistributor")
+    private FilmDistributor filmDistributor;
+
+    @ManyToOne
+    @JoinColumn(name ="director")
+    public Director director;
 
 }

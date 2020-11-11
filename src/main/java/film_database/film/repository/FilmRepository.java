@@ -8,6 +8,9 @@ import film_database.serialization.CloningUtility;
 
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -16,57 +19,59 @@ import java.util.stream.Collectors;
 @Dependent
 public class FilmRepository implements Repository<Film, Long> {
 
-    /**
-     * Underlying data store.
-     */
-    private DataStore store;
+    private EntityManager em;
 
-    /**
-     * @param store data store
-     */
-    @Inject
-    public FilmRepository(DataStore store) {
-        this.store = store;
+    @PersistenceContext
+    public void setEm(EntityManager em) {
+        this.em = em;
     }
 
     @Override
     public Optional<Film> find(Long id) {
-        return store.findFilm(id);
+        return Optional.ofNullable(em.find(Film.class, id));
     }
 
     @Override
-    public List<Film> findAll()  {
-        return store.findAllFilms();
+    public List<Film> findAll() {
+        return em.createQuery("select c from Film c", Film.class).getResultList();
     }
-
-    public List<Film> findAllByDistributor(FilmDistributor filmDistributor) {
-        return store.getFilmStream()
-                .filter(film -> film.getFilmDistributor().equals(filmDistributor))
-                .map(CloningUtility::clone)
-                .collect(Collectors.toList());
-    }
-
-    public Optional<Film> findByIdAndDistributor(Long id, FilmDistributor filmDistributor) {
-        return store.getFilmStream()
-                .filter(film -> film.getFilmDistributor().equals(filmDistributor))
-                .filter(film -> film.getId().equals(id))
-                .findFirst()
-                .map(CloningUtility::clone);
-    }
-
 
     @Override
     public void create(Film entity) {
-        store.createFilm(entity);
+        em.persist(entity);
     }
 
     @Override
     public void delete(Film entity) {
-        store.deleteFilm(entity.getId());
+        em.remove(em.find(Film.class, entity.getId()));
     }
 
     @Override
     public void update(Film entity) {
-        store.updateFilm(entity);
+        em.merge(entity);
     }
+
+    @Override
+    public void detach(Film entity) {
+        em.detach(entity);
+    }
+
+    public List<Film> findAllByDistributor(FilmDistributor filmDistributor) {
+        return em.createQuery("select c from Film c where c.filmDistributor = :filmDistributor", Film.class)
+                .setParameter("filmDistributor", filmDistributor)
+                .getResultList();
+    }
+
+
+    public Optional<Film> findByIdAndDistributor(Long id, FilmDistributor filmDistributor) {
+        try {
+            return Optional.of(em.createQuery("select c from Film c where c.id = :id and c.filmDistributor = :filmDistributor", Film.class)
+                    .setParameter("filmDistributor", filmDistributor)
+                    .setParameter("id", id)
+                    .getSingleResult());
+        } catch (NoResultException ex) {
+            return Optional.empty();
+        }
+    }
+
 }

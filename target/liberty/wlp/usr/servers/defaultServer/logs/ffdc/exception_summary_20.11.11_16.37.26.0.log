@@ -1,0 +1,24 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      8 11/11/2020, 16:37:26:076 CET 11/11/2020, 16:37:43:099 CET java.lang.ClassNotFoundException com.ibm.ws.jdbc.internal.JDBCDriverService 234
+                                                                            - C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_20.11.11_16.37.26.0.log
+     1      8 11/11/2020, 16:37:26:159 CET 11/11/2020, 16:37:43:099 CET java.sql.SQLNonTransientException com.ibm.ws.jdbc.DataSourceService 587
+                                                                            - C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_20.11.11_16.37.26.1.log
+     2      8 11/11/2020, 16:37:26:376 CET 11/11/2020, 16:37:43:099 CET java.sql.SQLNonTransientException com.ibm.ws.resource.internal.ResourceFactoryTrackerData$1 121
+                                                                            - C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_20.11.11_16.37.26.2.log
+     3      2 11/11/2020, 16:37:32:202 CET 11/11/2020, 16:37:43:100 CET javax.persistence.PersistenceException com.ibm.ws.jpa.management.JPAPUnitInfo.createEMFactory 759
+                                                                            - C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_20.11.11_16.37.32.0.log
+     4      2 11/11/2020, 16:37:32:610 CET 11/11/2020, 16:37:43:100 CET javax.persistence.PersistenceException com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObject 408
+                                                                            - C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_20.11.11_16.37.32.1.log
+     5      2 11/11/2020, 16:37:32:619 CET 11/11/2020, 16:37:43:100 CET com.ibm.wsspi.injectionengine.InjectionException com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl 199
+                                                                            - C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_20.11.11_16.37.32.2.log
+     6      2 11/11/2020, 16:37:32:796 CET 11/11/2020, 16:37:43:101 CET com.ibm.wsspi.injectionengine.InjectionException com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.inject 248
+                                                                            - C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_20.11.11_16.37.32.3.log
+     7      2 11/11/2020, 16:37:33:285 CET 11/11/2020, 16:37:43:101 CET java.security.PrivilegedActionException com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl 116
+                                                                            - C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_20.11.11_16.37.33.0.log
+     8      2 11/11/2020, 16:37:33:404 CET 11/11/2020, 16:37:43:322 CET java.lang.NullPointerException com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated 1341
+                                                                            - C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_20.11.11_16.37.33.1.log
+     9      2 11/11/2020, 16:37:33:751 CET 11/11/2020, 16:37:43:323 CET java.lang.NullPointerException com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated 1353
+                                                                            - C:\Users\Józek\IdeaProjects\film-database\target\liberty\wlp\usr\servers\defaultServer\logs\ffdc\ffdc_20.11.11_16.37.33.2.log
+------+------+---------------------------+---------------------------+---------------------------

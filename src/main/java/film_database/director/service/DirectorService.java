@@ -57,52 +57,5 @@ public class DirectorService {
         repository.create(director);
     }
 
-    /**
-     * Uploads director's avatar.
-     * Fails when director already has an avatar.
-     *
-     * @param id director's id
-     * @param is input stream containing new avatar
-     */
-    public void uploadAvatar(Long id, InputStream is) {
-        repository.find(id).ifPresent(director -> {
-            try {
-                if (director.getAvatar() == null) {
-                    director.setAvatar(is.readAllBytes());
-                    repository.update(director);
-                }
-            } catch (IOException ex) {
-                throw new IllegalStateException(ex);
-            }
-        });
-    }
 
-    /**
-     * Updates director's avatar.
-     *
-     * @param id director's id
-     * @param is input stream containing new avatar
-     */
-    public void updateAvatar(Long id, InputStream is) {
-        repository.find(id).ifPresent(director -> {
-            try {
-                director.setAvatar(is.readAllBytes());
-                repository.update(director);
-            } catch (IOException ex) {
-                throw new IllegalStateException(ex);
-            }
-        });
-    }
-
-    /**
-     * Deletes director's avatar.
-     *
-     * @param id director's id
-     */
-    public void deleteAvatar(Long id) {
-        repository.find(id).ifPresent(director -> {
-                director.setAvatar(null);
-                repository.update(director);
-        });
-    }
 }
