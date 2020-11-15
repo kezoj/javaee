@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -37,13 +38,21 @@ public class DirectorService {
      * @param id director's id
      * @return container with director
      */
+    @Transactional
     public Optional<Director> find(Long id) {
         return repository.find(id);
+    }
+
+
+    @Transactional
+    public Optional<Director> findByName(String name) {
+        return repository.findByName(name);
     }
 
     /**
      * @return all directors
      */
+    @Transactional
     public List<Director> findAll() {
         return repository.findAll();
     }
@@ -53,6 +62,7 @@ public class DirectorService {
      *
      * @param director new director
      */
+    @Transactional
     public void create(Director director) {
         repository.create(director);
     }

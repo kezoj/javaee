@@ -1,0 +1,71 @@
+------Start of DE processing------ = [12/11/2020, 16:37:55:194 CET]
+Exception = java.lang.NullPointerException
+Source = com.ibm.ws.uow.UOWManagerImpl.runUnderCurrentUOW
+probeid = 1130
+Stack Dump = java.lang.NullPointerException
+	at film_database.director.repository.DirectorRepository.create(DirectorRepository.java:50)
+	at film_database.director.repository.DirectorRepository$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.director.service.DirectorService.create(DirectorService.java:67)
+	at film_database.director.service.DirectorService$Proxy$_$$_WeldSubclass.create$$super(Unknown Source)
+	at jdk.internal.reflect.GeneratedMethodAccessor624.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.weld.interceptor.proxy.TerminalAroundInvokeInvocationContext.proceedInternal(TerminalAroundInvokeInvocationContext.java:51)
+	at org.jboss.weld.interceptor.proxy.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:78)
+	at com.ibm.tx.jta.cdi.interceptors.TransactionalInterceptor$1.run(TransactionalInterceptor.java:137)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderCurrentUOW(EmbeddableUOWManagerImpl.java:1077)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderNewUOW(EmbeddableUOWManagerImpl.java:1040)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderUOW(EmbeddableUOWManagerImpl.java:1013)
+	at com.ibm.tx.jta.cdi.interceptors.TransactionalInterceptor.runUnderUOWManagingEnablement(TransactionalInterceptor.java:151)
+	at com.ibm.tx.jta.cdi.interceptors.Required.required(Required.java:40)
+	at jdk.internal.reflect.GeneratedMethodAccessor623.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:73)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeAroundInvoke(InterceptorMethodHandler.java:84)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeInterception(InterceptorMethodHandler.java:72)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.invoke(InterceptorMethodHandler.java:56)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:79)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:68)
+	at film_database.director.service.DirectorService$Proxy$_$$_WeldSubclass.create(Unknown Source)
+	at film_database.director.service.DirectorService$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.configuration.InitializedData.init(InitializedData.java:78)
+	at film_database.configuration.InitializedData.contextInitialized(InitializedData.java:44)
+	at jdk.internal.reflect.GeneratedMethodAccessor617.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:95)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:85)
+	at org.jboss.weld.injection.MethodInvocationStrategy$SimpleMethodInvocationStrategy.invoke(MethodInvocationStrategy.java:168)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:330)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:308)
+	at org.jboss.weld.event.ObserverMethodImpl.notify(ObserverMethodImpl.java:286)
+	at javax.enterprise.inject.spi.ObserverMethod.notify(ObserverMethod.java:124)
+	at org.jboss.weld.util.Observers.notify(Observers.java:166)
+	at org.jboss.weld.event.ObserverNotifier.notifySyncObservers(ObserverNotifier.java:285)
+	at org.jboss.weld.event.ObserverNotifier.notify(ObserverNotifier.java:273)
+	at org.jboss.weld.event.ObserverNotifier.fireEvent(ObserverNotifier.java:177)
+	at org.jboss.weld.bootstrap.BeanDeploymentModule.fireEvent(BeanDeploymentModule.java:93)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.fireEventForApplicationScope(HttpContextLifecycle.java:161)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.contextInitialized(HttpContextLifecycle.java:147)
+	at org.jboss.weld.module.web.servlet.WeldInitialListener.contextInitialized(WeldInitialListener.java:99)
+	at com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated(WebApp.java:2437)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.notifyServletContextCreated(WebApp31.java:514)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:1041)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:6683)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApp(DynamicVirtualHost.java:470)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApplication(DynamicVirtualHost.java:465)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.startWebApplication(WebContainer.java:1178)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.access$100(WebContainer.java:109)
+	at com.ibm.ws.webcontainer.osgi.WebContainer$3.run(WebContainer.java:975)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+Dump of callerThis
+Object type = com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl
+  tc = class com.ibm.ejs.ras.TraceComponent@3f39e1b2
+    strings[0] = "TraceComponent[com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl,class com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl,[Transaction],null,null]"
+  _callbackManager = null
+  _runUnderUOWCallbackManager = null
+

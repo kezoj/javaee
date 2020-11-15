@@ -12,16 +12,16 @@
         <feature>jpa-2.2</feature>
     </featureManager>
 
-    <dataSource id="FilmDatabaseDataSource" jndiName="jdbc/FilmDatabase">
-        <jdbcDriver javax.sql.XADataSource="org.h2.jdbcx.JdbcDataSource"
+    <dataSource id="FilmDatabaseDataSource" jndiName="jdbc/filmDatabase">
+        <jdbcDriver javax.sql.XADataSource="org.h2.jdbc.JdbcDataSource"
                     javax.sql.ConnectionPoolDataSource="org.h2.jdbcx.JdbcDataSource"
-                    javax.sql.DataSource="org.h2.jdbcx.JdbcDataSource"
+                    javax.sql.DataSource="org.h2.jdbc.JdbcDataSource"
                     libraryRef="H2JDBCLib"/>
-        <properties URL="jdbc:h2:mem:simple-rpg-characters"/>
+        <properties URL="jdbc:h2:mem:filmDatabase"/>
     </dataSource>
 
     <library id="H2JDBCLib">
-        <fileset dir="${wlp.install.dir}/usr/shared/resources" includes="h2-1.4.200.jar"/>
+        <fileset dir="C:/Program Files (x86)/H2/bin" includes="h2-1.4.200.jar"/>
     </library>
 
     <logging consoleLogLevel="INFO" />

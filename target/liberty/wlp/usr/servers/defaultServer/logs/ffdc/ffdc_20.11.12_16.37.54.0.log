@@ -1,0 +1,194 @@
+------Start of DE processing------ = [12/11/2020, 16:37:54:338 CET]
+Exception = java.lang.RuntimeException
+Source = com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObject
+probeid = 408
+Stack Dump = java.lang.RuntimeException: javax.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [filmDatabasePu] failed.
+Internal Exception: Exception [EclipseLink-7154] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: The attribute [films] in entity class [class film_database.filmDistributor.entity.FilmDistributor] has a mappedBy value of [filmDistributors] which does not exist in its owning entity class [class film_database.film.entity.Film]. If the owning entity class is a @MappedSuperclass, this is invalid, and your attribute should reference the correct subclass.
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getEntityManagerFactory(JPAPUnitInfo.java:808)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.getEntityManagerPool(JPAPUnitInfo.java:1006)
+	at com.ibm.ws.jpa.management.JPATxEntityManager.<init>(JPATxEntityManager.java:147)
+	at com.ibm.ws.jpa.container.v22.JPATxEntityManagerV22.<init>(JPATxEntityManagerV22.java:45)
+	at com.ibm.ws.jpa.container.v22.internal.JPA22Runtime.createJPATxEntityManager(JPA22Runtime.java:71)
+	at com.ibm.ws.jpa.management.AbstractJPAComponent.getEntityManager(AbstractJPAComponent.java:255)
+	at com.ibm.ws.jpa.container.osgi.jndi.JPAJndiLookupObjectFactory.getObjectInstance(JPAJndiLookupObjectFactory.java:149)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObjectInstance(InjectionBinding.java:1552)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectionObject(InjectionBinding.java:1428)
+	at com.ibm.wsspi.injectionengine.InjectionBinding.getInjectableObject(InjectionBinding.java:1368)
+	at com.ibm.wsspi.injectionengine.InjectionTarget.inject(InjectionTarget.java:104)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.inject(WebSphereInjectionServicesImpl.java:198)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.inject(WebSphereInjectionServicesImpl.java:150)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.access$000(WebSphereInjectionServicesImpl.java:74)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl$1.run(WebSphereInjectionServicesImpl.java:134)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl$1.run(WebSphereInjectionServicesImpl.java:130)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.callInject(WebSphereInjectionServicesImpl.java:130)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.injectJavaEEResources(WebSphereInjectionServicesImpl.java:112)
+	at com.ibm.ws.cdi.impl.weld.injection.WebSphereInjectionServicesImpl.aroundInject(WebSphereInjectionServicesImpl.java:317)
+	at org.jboss.weld.injection.InjectionContextImpl.run(InjectionContextImpl.java:46)
+	at org.jboss.weld.injection.producer.ResourceInjector.inject(ResourceInjector.java:71)
+	at org.jboss.weld.injection.producer.BasicInjectionTarget.inject(BasicInjectionTarget.java:117)
+	at org.jboss.weld.bean.ManagedBean.create(ManagedBean.java:161)
+	at org.jboss.weld.contexts.AbstractContext.get(AbstractContext.java:96)
+	at org.jboss.weld.bean.ContextualInstanceStrategy$DefaultContextualInstanceStrategy.get(ContextualInstanceStrategy.java:100)
+	at org.jboss.weld.bean.ContextualInstanceStrategy$CachingContextualInstanceStrategy.get(ContextualInstanceStrategy.java:177)
+	at org.jboss.weld.bean.ContextualInstance.get(ContextualInstance.java:50)
+	at org.jboss.weld.bean.proxy.ContextBeanInstance.getInstance(ContextBeanInstance.java:102)
+	at org.jboss.weld.bean.proxy.ProxyMethodHandler.getInstance(ProxyMethodHandler.java:131)
+	at film_database.director.repository.DirectorRepository$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.director.service.DirectorService.create(DirectorService.java:67)
+	at film_database.director.service.DirectorService$Proxy$_$$_WeldSubclass.create$$super(Unknown Source)
+	at jdk.internal.reflect.GeneratedMethodAccessor624.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.weld.interceptor.proxy.TerminalAroundInvokeInvocationContext.proceedInternal(TerminalAroundInvokeInvocationContext.java:51)
+	at org.jboss.weld.interceptor.proxy.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:78)
+	at com.ibm.tx.jta.cdi.interceptors.TransactionalInterceptor$1.run(TransactionalInterceptor.java:137)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderCurrentUOW(EmbeddableUOWManagerImpl.java:1077)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderNewUOW(EmbeddableUOWManagerImpl.java:1040)
+	at com.ibm.ws.uow.embeddable.EmbeddableUOWManagerImpl.runUnderUOW(EmbeddableUOWManagerImpl.java:1013)
+	at com.ibm.tx.jta.cdi.interceptors.TransactionalInterceptor.runUnderUOWManagingEnablement(TransactionalInterceptor.java:151)
+	at com.ibm.tx.jta.cdi.interceptors.Required.required(Required.java:40)
+	at jdk.internal.reflect.GeneratedMethodAccessor623.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:73)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeAroundInvoke(InterceptorMethodHandler.java:84)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeInterception(InterceptorMethodHandler.java:72)
+	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.invoke(InterceptorMethodHandler.java:56)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:79)
+	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:68)
+	at film_database.director.service.DirectorService$Proxy$_$$_WeldSubclass.create(Unknown Source)
+	at film_database.director.service.DirectorService$Proxy$_$$_WeldClientProxy.create(Unknown Source)
+	at film_database.configuration.InitializedData.init(InitializedData.java:78)
+	at film_database.configuration.InitializedData.contextInitialized(InitializedData.java:44)
+	at jdk.internal.reflect.GeneratedMethodAccessor617.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:95)
+	at org.jboss.weld.injection.StaticMethodInjectionPoint.invoke(StaticMethodInjectionPoint.java:85)
+	at org.jboss.weld.injection.MethodInvocationStrategy$SimpleMethodInvocationStrategy.invoke(MethodInvocationStrategy.java:168)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:330)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:308)
+	at org.jboss.weld.event.ObserverMethodImpl.notify(ObserverMethodImpl.java:286)
+	at javax.enterprise.inject.spi.ObserverMethod.notify(ObserverMethod.java:124)
+	at org.jboss.weld.util.Observers.notify(Observers.java:166)
+	at org.jboss.weld.event.ObserverNotifier.notifySyncObservers(ObserverNotifier.java:285)
+	at org.jboss.weld.event.ObserverNotifier.notify(ObserverNotifier.java:273)
+	at org.jboss.weld.event.ObserverNotifier.fireEvent(ObserverNotifier.java:177)
+	at org.jboss.weld.bootstrap.BeanDeploymentModule.fireEvent(BeanDeploymentModule.java:93)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.fireEventForApplicationScope(HttpContextLifecycle.java:161)
+	at org.jboss.weld.module.web.servlet.HttpContextLifecycle.contextInitialized(HttpContextLifecycle.java:147)
+	at org.jboss.weld.module.web.servlet.WeldInitialListener.contextInitialized(WeldInitialListener.java:99)
+	at com.ibm.ws.webcontainer.webapp.WebApp.notifyServletContextCreated(WebApp.java:2437)
+	at com.ibm.ws.webcontainer31.osgi.webapp.WebApp31.notifyServletContextCreated(WebApp31.java:514)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:1041)
+	at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:6683)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApp(DynamicVirtualHost.java:470)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApplication(DynamicVirtualHost.java:465)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.startWebApplication(WebContainer.java:1178)
+	at com.ibm.ws.webcontainer.osgi.WebContainer.access$100(WebContainer.java:109)
+	at com.ibm.ws.webcontainer.osgi.WebContainer$3.run(WebContainer.java:975)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: javax.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [filmDatabasePu] failed.
+Internal Exception: Exception [EclipseLink-7154] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: The attribute [films] in entity class [class film_database.filmDistributor.entity.FilmDistributor] has a mappedBy value of [filmDistributors] which does not exist in its owning entity class [class film_database.film.entity.Film]. If the owning entity class is a @MappedSuperclass, this is invalid, and your attribute should reference the correct subclass.
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createPredeployFailedPersistenceException(EntityManagerSetupImpl.java:2109)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2085)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:350)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:316)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.createEMFactory(JPAPUnitInfo.java:919)
+	at com.ibm.ws.jpa.management.JPAPUnitInfo.initialize(JPAPUnitInfo.java:766)
+	at com.ibm.ws.jpa.management.JPAPxmlInfo.extractPersistenceUnits(JPAPxmlInfo.java:182)
+	at com.ibm.ws.jpa.management.JPAScopeInfo.processPersistenceUnit(JPAScopeInfo.java:88)
+	at com.ibm.ws.jpa.management.JPAApplInfo.addPersistenceUnits(JPAApplInfo.java:119)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.processWebModulePersistenceXml(JPAComponentImpl.java:515)
+	at com.ibm.ws.jpa.container.osgi.internal.JPAComponentImpl.applicationStarting(JPAComponentImpl.java:304)
+	at com.ibm.ws.container.service.state.internal.ApplicationStateManager.fireStarting(ApplicationStateManager.java:51)
+	at com.ibm.ws.container.service.state.internal.StateChangeServiceImpl.fireApplicationStarting(StateChangeServiceImpl.java:50)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.preDeployApp(SimpleDeployedAppInfoBase.java:547)
+	at com.ibm.ws.app.manager.module.internal.SimpleDeployedAppInfoBase.installApp(SimpleDeployedAppInfoBase.java:508)
+	at com.ibm.ws.app.manager.module.internal.DeployedAppInfoBase.deployApp(DeployedAppInfoBase.java:349)
+	at com.ibm.ws.app.manager.war.internal.WARApplicationHandlerImpl.install(WARApplicationHandlerImpl.java:65)
+	at com.ibm.ws.app.manager.internal.statemachine.StartAction.execute(StartAction.java:144)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.enterState(ApplicationStateMachineImpl.java:1317)
+	at com.ibm.ws.app.manager.internal.statemachine.ApplicationStateMachineImpl.run(ApplicationStateMachineImpl.java:897)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	... 3 more
+Caused by: Exception [EclipseLink-28018] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [filmDatabasePu] failed.
+Internal Exception: Exception [EclipseLink-7154] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: The attribute [films] in entity class [class film_database.filmDistributor.entity.FilmDistributor] has a mappedBy value of [filmDistributors] which does not exist in its owning entity class [class film_database.film.entity.Film]. If the owning entity class is a @MappedSuperclass, this is invalid, and your attribute should reference the correct subclass.
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.predeployFailed(EntityManagerSetupException.java:233)
+	... 24 more
+Caused by: Exception [EclipseLink-7154] (Eclipse Persistence Services - 2.7.7.v20200504-69f2c2b80d): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: The attribute [films] in entity class [class film_database.filmDistributor.entity.FilmDistributor] has a mappedBy value of [filmDistributors] which does not exist in its owning entity class [class film_database.film.entity.Film]. If the owning entity class is a @MappedSuperclass, this is invalid, and your attribute should reference the correct subclass.
+	at org.eclipse.persistence.exceptions.ValidationException.noMappedByAttributeFound(ValidationException.java:1376)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.RelationshipAccessor.getOwningMapping(RelationshipAccessor.java:491)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.OneToManyAccessor.processOneToManyMapping(OneToManyAccessor.java:217)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.OneToManyAccessor.process(OneToManyAccessor.java:150)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processNonOwningRelationshipAccessors(MetadataProject.java:1652)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processStage3(MetadataProject.java:1941)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProcessor.processORMMetadata(MetadataProcessor.java:584)
+	at org.eclipse.persistence.internal.jpa.deployment.PersistenceUnitProcessor.processORMetadata(PersistenceUnitProcessor.java:629)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2006)
+	... 22 more
+
+Dump of callerThis
+Object type = com.ibm.ws.jpa.management.JPAPCtxtInjectionBinding
+
+==> Performing default dump from com.ibm.ws.injectionengine.ffdc.InjectionDiagnosticModule  = Thu Nov 12 16:37:54 CET 2020
+ = *** Start InjectionDiagnosticModule Dump ***
+ = 
+ = *** Start InjectionEngine Dump    ---> com.ibm.ws.injectionengine.osgi.internal.OSGiInjectionEngineImpl@7303a313
+ = 
+ =    Default Factories : 
+ =       Indirect    = com.ibm.ws.injectionengine.osgi.internal.IndirectJndiLookupReferenceFactoryImpl@5127d4ef
+ =       ResIndirect = com.ibm.ws.injectionengine.osgi.internal.IndirectJndiLookupReferenceFactoryImpl@465e83bc
+ =       ResRef      = com.ibm.ws.injectionengine.osgi.internal.ResRefReferenceFactoryImpl@3636a3ef
+ =       ResAuto     = com.ibm.ws.injectionengine.osgi.internal.ResAutoLinkReferenceFactoryImpl@58c38501
+ =       EJBLink     = com.ibm.ws.injectionengine.osgi.internal.EJBLinkReferenceFactoryImpl@37acb25a
+ =       MBLink      = com.ibm.ws.injectionengine.factory.MBLinkReferenceFactoryImpl@5dd9470
+ = 
+ =    Actual Factories : 
+ =       com.ibm.ws.injectionengine.factory.MBLinkReferenceFactoryImpl@5dd9470
+ = 
+ =    Registered Processors : 
+ =       javax.persistence.PersistenceUnit : com.ibm.ws.jpa.container.osgi.internal.JPAPUnitProcessorProvider@67766ff
+ =       javax.inject.Inject : com.ibm.ws.cdi.impl.inject.InjectProcessorProvider@425810bd
+ =       javax.annotation.Resource : com.ibm.ws.injectionengine.processor.ResourceProcessorProvider@103444ce
+ =       javax.ws.rs.core.Context : com.ibm.ws.jaxrs20.component.injection.ContextProcessorProvider@79a32cac
+ =       javax.ws.rs.PathParam : com.ibm.ws.jaxrs20.component.injection.PathParamProcessorProvider@44deedf9
+ =       javax.annotation.sql.DataSourceDefinition : com.ibm.ws.injectionengine.processor.DataSourceDefinitionProcessorProvider@4681d027
+ =       javax.ws.rs.BeanParam : com.ibm.ws.jaxrs20.component.injection.BeanParamProcessProvider@7421fe0d
+ =       javax.ws.rs.HeaderParam : com.ibm.ws.jaxrs20.component.injection.HeaderParamProcessorProvider@14076a69
+ =       javax.ws.rs.QueryParam : com.ibm.ws.jaxrs20.component.injection.QueryParamProcessorProvider@2785fc35
+ =       javax.ws.rs.MatrixParam : com.ibm.ws.jaxrs20.component.injection.MatrixParamProcessorProvider@6fcd100a
+ =       javax.persistence.PersistenceContext : com.ibm.ws.jpa.container.osgi.internal.JPAPCtxtProcessorProvider@14e75a68
+ =       javax.ws.rs.CookieParam : com.ibm.ws.jaxrs20.component.injection.CookieParamProcessorProvider@3b9c3ebf
+ = 
+ =    Registered Object Factories : 
+ = 
+ =    Registered No-Override Object Factories : 
+ =       javax.annotation.Resource
+ =          javax.transaction.TransactionSynchronizationRegistry : com.ibm.ws.transaction.services.TransactionSynchronizationRegistryObjectFactoryInfo@33f019ad
+ =          com.ibm.wsspi.uow.UOWManager : com.ibm.ws.transaction.services.UOWManagerObjectFactoryInfo@34ba0299
+ =          javax.transaction.UserTransaction : com.ibm.ws.transaction.services.TransactionObjectFactoryInfo@1a203a7c
+ =          javax.enterprise.inject.spi.BeanManager : com.ibm.ws.cdi.jndi.liberty.BeanManagerObjectFactoryInfo@40139641
+ = 
+ =    Registered Override Reference Factories : 
+ = 
+ =    Registered MetaDataListeners : 
+ =       com.ibm.ws.cdi.impl.CDIContainerImpl@731dd29f
+ = 
+ =    isEmbeddable    : false
+ = 
+ = *** InjectionEngine Dump Complete ***
+ = 
+ = *** InjectionDiagnosticModule Dump Complete ***
++ Data for directive [Default] obtained. = 
+==> Dump complete for com.ibm.ws.injectionengine.ffdc.InjectionDiagnosticModule  = Thu Nov 12 16:37:54 CET 2020

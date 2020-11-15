@@ -1,3 +1,3 @@
-#Wed Nov 11 15:24:20 CET 2020
+#Thu Nov 12 16:37:10 CET 2020
 lib/features/com.ibm.websphere.appserver.injection-1.0.mf=2a39cbf88e2d6c5eeb5115d28986a02c
 lib/com.ibm.ws.injection_1.0.46.jar=e1432fbe828fde32032bf0536eabb4dc

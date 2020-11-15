@@ -7,6 +7,7 @@ import lombok.experimental.SuperBuilder;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 
 @Getter
@@ -28,4 +29,14 @@ public class FilmDistributor implements Serializable{
     private LocalDate creationDate;
     private double capital;
 
+
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
+            mappedBy = "filmDistributor",
+            orphanRemoval = true
+    )
+    private List<Film> films;
 }

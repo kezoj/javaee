@@ -1,14 +1,13 @@
 package film_database.director.entity;
 
+import film_database.film.entity.Film;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
@@ -29,4 +28,11 @@ public class Director implements Serializable {
     private LocalDate birthDate;
     private Education education;
 
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @OneToMany(
+            fetch = FetchType.LAZY,
+            mappedBy = "director"
+    )
+    private List<Film> films;
 }

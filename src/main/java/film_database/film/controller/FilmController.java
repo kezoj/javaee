@@ -1,5 +1,6 @@
 package film_database.film.controller;
 
+import film_database.director.service.DirectorService;
 import film_database.film.dto.CreateFilmRequest;
 import film_database.film.dto.GetFilmResponse;
 import film_database.film.dto.GetFilmsResponse;
@@ -26,6 +27,7 @@ public class FilmController {
      */
     private FilmService service;
     private FilmDistributorService filmDistributorService;
+    private DirectorService directorService;
 
     /**
      * JAX-RS requires no-args constructor.
@@ -37,9 +39,10 @@ public class FilmController {
      * @param service service for managing films
      */
     @Inject
-    public void setService(FilmService service, FilmDistributorService filmDistributorService) {
+    public void setService(FilmService service, FilmDistributorService filmDistributorService, DirectorService directorService) {
         this.service = service;
         this.filmDistributorService = filmDistributorService;
+        this.directorService = directorService;
     }
 
     /**
@@ -71,7 +74,7 @@ public class FilmController {
             }
             else
             {
-                return Response.status(Response.Status.NOT_FOUND).build();
+                return Response.status(Response.Status.OK).build();
             }
         }
         else
@@ -84,11 +87,20 @@ public class FilmController {
     @POST
     @Path("{film_distributor_id}/film")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response postFilm(CreateFilmRequest request) {
-        Film film = CreateFilmRequest.dtoToEntityMapper().apply(request);
-        service.create(film);
-        return Response.created(UriBuilder.fromMethod(film_database.film.controller.FilmController.class, "getFilm")
-                .build(film.getId())).build();
+    public Response postFilm(@PathParam("film_distributor_id") Long filmDistributorId, CreateFilmRequest request) {
+        Optional<FilmDistributor> filmDistributor = filmDistributorService.find(filmDistributorId);
+
+        if (filmDistributor.isPresent()) {
+            Film film = CreateFilmRequest.dtoToEntityMapper(
+                    name -> directorService.findByName(name).orElse(null),
+                    filmDistributor.get())
+                    .apply(request);
+
+            service.create(film);
+            return Response.status(Response.Status.OK).build();
+        } else {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
     }
 
     @DELETE
@@ -133,5 +145,9 @@ public class FilmController {
         }
     }
 
+    public boolean checkForFilmDistributor(Long film_distributor_id) {
+        Optional<FilmDistributor> filmDistributor = filmDistributorService.find(film_distributor_id);
+        return filmDistributor.isPresent();
+    }
 }
 

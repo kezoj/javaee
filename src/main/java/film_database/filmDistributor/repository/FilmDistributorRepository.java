@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RequestScoped
-public class FilmDistributorRepository implements Repository<FilmDistributor, Long> {
+public class FilmDistributorRepository{
 
     private EntityManager em;
 
@@ -22,32 +22,30 @@ public class FilmDistributorRepository implements Repository<FilmDistributor, Lo
         this.em = em;
     }
 
-    @Override
+
     public Optional<FilmDistributor> find(Long id) {
         return Optional.ofNullable(em.find(FilmDistributor.class, id));
     }
 
-    @Override
     public List<FilmDistributor> findAll() {
         return em.createQuery("select c from FilmDistributor c", FilmDistributor.class).getResultList();
     }
 
-    @Override
+
     public void create(FilmDistributor entity) {
         em.persist(entity);
     }
 
-    @Override
-    public void delete(FilmDistributor entity) {
-        em.remove(em.find(FilmDistributor.class, entity.getId()));
+    public void delete(Long id) {
+        em.remove(em.find(FilmDistributor.class, id));
     }
 
-    @Override
+
     public void update(FilmDistributor entity) {
         em.merge(entity);
     }
 
-    @Override
+
     public void detach(FilmDistributor entity) {
         em.detach(entity);
     }

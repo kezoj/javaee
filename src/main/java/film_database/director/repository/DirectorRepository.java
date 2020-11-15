@@ -8,6 +8,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 import java.util.Optional;
@@ -25,6 +26,18 @@ public class DirectorRepository implements Repository<Director, Long> {
     @Override
     public Optional<Director> find(Long id) {
         return Optional.ofNullable(em.find(Director.class, id));
+    }
+
+
+    public Optional<Director> findByName(String name) {
+        try {
+            return Optional.ofNullable(
+                    em.createQuery("select u from Director u where u.name = :name", Director.class)
+                            .setParameter("name", name)
+                            .getSingleResult());
+        } catch (NoResultException ex) {
+            return Optional.empty();
+        }
     }
 
     @Override

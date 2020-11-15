@@ -8,31 +8,27 @@ import lombok.*;
 import java.time.LocalDate;
 import java.util.function.Function;
 
-
-@Getter
-@Setter
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-@ToString
-@EqualsAndHashCode
 public class CreateFilmRequest {
 
-    public Director director;
-    public FilmDistributor filmDistributor;
-    public LocalDate releaseDate;
-    public String title;
-    public String genere;
+    private String directorName;
+    private LocalDate releaseDate;
+    private String title;
+    private String genere;
 
-    public static Function<CreateFilmRequest, Film> dtoToEntityMapper() {
+    
+    public static Function<CreateFilmRequest, Film> dtoToEntityMapper(
+            Function<String, Director> directorFunction,
+            FilmDistributor filmDistributor) {
         return request -> Film.builder()
-                .director(request.getDirector())
-                .filmDistributor(request.getFilmDistributor())
+                .director(directorFunction.apply(request.getDirectorName()))
+                .filmDistributor(filmDistributor)
                 .releaseDate(request.getReleaseDate())
                 .title(request.getTitle())
                 .genere(request.getGenere())
                 .build();
     }
-
 }
-

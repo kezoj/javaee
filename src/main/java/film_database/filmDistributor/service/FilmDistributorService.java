@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,23 +22,28 @@ public class FilmDistributorService {
         this.repository = filmDistributorRepository;
     }
 
+    @Transactional
     public Optional<FilmDistributor> find(Long id) {
         return repository.find(id);
     }
 
+    @Transactional
     public List<FilmDistributor> findAll() {
         return repository.findAll();
     }
 
+    @Transactional
     public void create(FilmDistributor filmDistributor) {
         repository.create(filmDistributor);
     }
 
+    @Transactional
     public void update(FilmDistributor filmDistributor) {
         repository.update(filmDistributor);
     }
 
+    @Transactional
     public void delete(Long id) {
-        repository.delete(repository.find(id).orElseThrow());
+        repository.delete(id);
     }
 }
